@@ -1,0 +1,67 @@
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 0.5em;
+  gap: 0.2em;
+  user-select: none;
+  background-color: #e8e8e8;
+  border-bottom: 1px solid rgba(180,180,180,0.1);
+}
+
+#finder-c {
+  background-color: rgba(150,150,150,0.2);
+  border-radius: 10px;
+  padding: 3px 5px;
+  display:flex;
+  justify-content: center;
+}
+#finder-c::-webkit-scrollbar {
+  display: none;
+}
+#finder-c input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 3px;
+  padding-left: 5px;
+  font-family: "outfit-r" , sans-serif;
+  font-size: 16px;
+}
+#h-t {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.h-t-b {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(240,240,250,0.6);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width:760px) {
+.header {
+  padding: 7px 2em;
+}
+#finder-c input {
+  width: 300px;
+  padding: 7px;
+}
+}
+
+@media (max-width:359px) {
+#finder-c {
+  overflow: auto;
+  width: 80%;
+}
+}

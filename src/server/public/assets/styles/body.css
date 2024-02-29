@@ -1,0 +1,45 @@
+
+@font-face {
+  font-family: 'outfit-r';
+  src: url('../fonts/Outfit-Regular.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'nunito-r';
+  src: url('../fonts/Nunito-Regular.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mulish-ExtraBold';
+  src: url('../fonts/Mulish-ExtraBold.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --bg : #e8e8e8;
+  --tint : #f1f1f1;
+  --f-color : black;
+}
+
+body {
+  background-color: var(--bg);
+}
+body::-webkit-scrollbar {
+  width: 0.5em;
+  background-color: #f1f1f1;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}

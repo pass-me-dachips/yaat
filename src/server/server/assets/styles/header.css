@@ -1,0 +1,75 @@
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 0.5em;
+  gap: 0.2em;
+  user-select: none;
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--header-border);
+}
+
+.header-logo:hover {
+  opacity: 0.5;
+}
+
+#finder-c {
+  background-color: var(--finder-name);
+  border-radius: 10px;
+  padding: 3px 5px;
+  display:flex;
+  justify-content: center;
+}
+#finder-c::-webkit-scrollbar {
+  display: none;
+}
+#finder-c input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 3px;
+  padding-left: 5px;
+  font-family: "outfit-r" , sans-serif;
+  font-size: 16px;
+  color: var(--content-txt-color);
+}
+#h-t {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.h-t-b {
+  width: 30px;
+  height: 30px;
+  background-color: var(--tree-btn-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.h-t-b-tree:hover {
+  opacity: 0.5;
+}
+
+@media (min-width:760px) {
+.header {
+  padding: 7px 2em;
+}
+#finder-c input {
+  width: 300px;
+  padding: 7px;
+}
+}
+
+@media (max-width:359px) {
+#finder-c {
+  overflow: auto;
+  width: 80%;
+}
+}

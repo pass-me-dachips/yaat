@@ -1,0 +1,65 @@
+
+#changelog-cont {
+  width: 93%;
+  margin: auto;
+  margin-top: 3em;
+}
+#changelog-title {
+  font-family: "Mulish-ExtraBold", sans-serif;     
+  font-size: 35px;
+}
+#changelog-content-box {
+  margin-top: 1.5em;
+}
+.changelog-content-v {
+  background-color: rgb(249,249,249);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 3em;
+}
+.changelog-content-header-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  padding-bottom: 0.7em;
+  border-bottom: 1px solid #f1f1f1;
+}
+.changelog-content-h-timeframe {
+  font-family: "Mulish-ExtraBold", sans-serif;
+  color: rgba(0,0,0,0.6);
+}
+.changelog-content-h-tf-t {
+  color: dodgerblue;
+}
+.changelog-content-h-tf-user {
+  padding: 3px 7px;
+  background-color: #e9e9e9;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-family: "outfit-r", sans-serif;
+}
+.changelog-description {
+  padding: 1em 0;
+}
+.changelog-co-ch-titles {
+  font-family: "Mulish-ExtraBold" , sans-serif;
+  font-size: 17px;
+  padding: 0.5em 0px;
+}
+.changelog-co-ch-lists {
+  font-family: "nunito-r" , sans-serif;
+  font-size: 16px;
+  padding: 0.2em 0px;   
+  list-style-type:decimal;
+}
+
+
+@media (min-width:760px) {
+#changelog-cont {
+  width: 55%;
+}     
+}
