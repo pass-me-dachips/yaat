@@ -9,12 +9,9 @@ import cat from "./src/cmds/cat.js";
 import help from "./src/cmds/help.js";
 import info from "./src/cmds/info.js";
 import chuser from "./src/cmds/chuser.js";
-import startSever from "./src/server/server.js";
 
 const cmds = argv;
 const yaatPortion = cmds.slice(2);
-
-startSever(); //would remove
 
 if (yaatPortion.length === 0) {
   yaat();
