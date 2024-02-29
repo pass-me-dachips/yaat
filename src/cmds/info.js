@@ -1,29 +1,31 @@
-import chalk from "chalk";
 import { readFile } from "../lib/fsRead.js";
 import construct from "../interpreter/configs/construct.js";
+import { stdWrite } from "../lib/std.js";
 
 export default function info() {
   const yaatVersionsArray = readFile(".yaat_versions");
   const yaatVersions = construct(yaatVersionsArray);
   const yaatUser = readFile(".user");
 
-  let CLIversion =
-    chalk.blue("yaat CLI version ") + chalk.yellow(yaatVersions[1]);
-  let Clientversion =
-    chalk.blue("yaat Client version ") + chalk.yellow(yaatVersions[3]);
-  let currentUser = chalk.blue("currentUser ~ ") + chalk.yellow(yaatUser);
+  const clientVersion = yaatVersions[3];
+  const serverVersion = yaatVersions[1];
+  const rootUser = yaatUser;
 
-  let template = `
-  y y y y y y y y     
-  y             y    ${CLIversion}
-  y             y
-  y             y    ${Clientversion}
-  y             y
-  y       y y y y    ${currentUser}
-  y       y y y
-  y y y y y y        
-`;
+  const HEAD = (header) => [header, "green", false, true];
+  const BODY = (value) => [value, "white", true];
 
-  console.log(template);
+  stdWrite(...HEAD("[Client-version] "));
+  stdWrite(...BODY(clientVersion));
+  stdWrite(...HEAD("[Server-version] "));
+  stdWrite(...BODY(serverVersion));
+  stdWrite(...HEAD("[Root-user] "));
+  stdWrite(...BODY(rootUser));
+
   return void 0;
 }
+
+/* RETURN =
+[Client-version] 1.2
+[Server-version] 1.2
+[Root-user] yaat@no-user
+ */
