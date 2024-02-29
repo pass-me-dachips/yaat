@@ -11,7 +11,7 @@ export default function info() {
   const serverVersion = yaatVersions[1];
   const rootUser = yaatUser;
 
-  const HEAD = (header) => [header, "green", false, true];
+  const HEAD = (header) => [header, "green", false, false];
   const BODY = (value) => [value, "white", true];
 
   stdWrite(...HEAD("[Client-version] "));
