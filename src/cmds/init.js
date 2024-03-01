@@ -2,14 +2,17 @@ import { cwd } from "node:process";
 import argsParser from "../lib/argsParser.js";
 import formatPath from "../lib/formatPath.js";
 import { writeFile, mkDir } from "../lib/fsWrite.js";
-import { branch_IndexdotYaat, branch_dotyaatEmbed } from "../init/branch.js";
+import {
+  branch_IndexdotYaat,
+  branch_dotyaatEmbed,
+} from "../templates/init/branch.js";
 import {
   tree_installation,
   tree_introduction,
   tree_useCases,
   tree_dotyaatconstruct,
   tree_dotyaatEmbed,
-} from "../init/tree.js";
+} from "../templates/init/tree.js";
 import { stdWrite } from "../lib/std.js";
 
 export default function init(args) {
