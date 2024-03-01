@@ -2,21 +2,22 @@ import { cwd } from "node:process";
 import formatPath from "../lib/formatPath.js";
 import { readFile } from "../lib/fsRead.js";
 import construct from "../interpreter/configs/construct.js";
-import chalk from "chalk";
-
-const stdout = (data) => process.stdout.write(data);
+import { stdWrite } from "../lib/std.js";
 
 export default function cat() {
   const currentWorkingDir = cwd();
   const filePath = formatPath(currentWorkingDir, ".yaatconstruct");
 
-  stdout(`[-] Reading ${filePath} `);
-  const yaatConstruct_raw = readFile(filePath);
-  stdout(chalk.green(`[done]\n`));
+  const HEAD = (header) => [`[*] ${header} `, "blue", false, false];
+  const BODY = () => [`[Done]`, "yellow", true, false];
 
-  stdout(`[-] Constructing ${filePath} `);
+  stdWrite(...HEAD("Reading " + filePath));
+  const yaatConstruct_raw = readFile(filePath);
+  stdWrite(...BODY());
+
+  stdWrite(...HEAD("Constructing " + filePath));
   const yaatconstruct = construct(yaatConstruct_raw);
-  stdout(chalk.green(`[done]\n\n`));
+  stdWrite(...BODY());
 
   const ycLen = yaatconstruct.length;
 
@@ -27,9 +28,10 @@ export default function cat() {
         object[yaatconstruct[i]] = yaatconstruct[i + 1];
       }
     }
+    stdWrite("\n" + object + "\n", "green", true);
     console.log(object);
   } else {
-    console.log({});
+    stdWrite("\n{}", "green", true, false);
   }
   return void 0;
 }
