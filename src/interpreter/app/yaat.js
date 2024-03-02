@@ -94,7 +94,7 @@ export default function yaatTree(yaat, fileName) {
     const astTree = AST(syntaxCheck);
     return astTree;
   } else {
-    return null;
+    throw { message: `Cannot read null on ${fileName}` };
   }
 }
 // usecase => yaatTree(data, fileName)
