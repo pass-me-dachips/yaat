@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 // Yaat! Another Annotation Technology.
 import { argv } from "node:process";
 import yaat from "./src/cmds/yaat.js";
@@ -13,15 +14,15 @@ import chuser from "./src/cmds/chuser.js";
 const cmds = argv;
 const yaatPortion = cmds.slice(2);
 
-if (yaatPortion.length === 0) {
-  yaat();
+if (yaatPortion.length === 0 || yaatPortion[0] === "port-") {
+  yaat(yaatPortion[1]);
 } else {
   const cmd = yaatPortion[0];
   const options = yaatPortion.slice(1);
 
   switch (cmd) {
     case "o":
-      o(options[0]);
+      o(options);
       break;
     case "init":
       init(options);
