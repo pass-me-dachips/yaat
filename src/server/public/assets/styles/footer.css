@@ -17,7 +17,7 @@
   user-select: none;
   backdrop-filter: blur(25px);
   z-index: 2;
-  animation-duration: 0.8s;
+  animation-duration: 0.3s;
   animation-fill-mode: forwards;
 }
 .f::-webkit-scrollbar {
@@ -46,9 +46,9 @@
   gap: 0.3em;
   cursor: pointer;
 }
-/* .f-t-c:hover {
-  color:red;
-} */
+.f-t-c:hover {
+  opacity: 0.4;
+}
 .f-t-c-t {
   color: var(--f-color);
   font-family: "outfit-r", sans-serif;

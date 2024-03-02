@@ -1,30 +1,27 @@
 
+#tree-body, #branch-body {
+  display: none;
+}
 .branch-content-box {
   width: 94%;
   margin: auto;
   margin-top: 4.5em;
+  background-color: var(--content-box);
+  padding: 1.5em 1.2em;
+  border-radius: 10px;
+  margin-bottom: 10em;
 }
-
-#tree-tint {  
+.tree-tab {
   position: fixed;
-  background-color: rgba(0,0,0,0.4);
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  z-index: 3;  
-}
-#tree-tab {
-  position: fixed;
-  background-color: #f1f1f1;
+  background-color: var(--treetab-color);
   left: 0;
   top: 0;
   bottom: 0;
   width: 80%;
   z-index: 4;
-  animation-duration: 0.6s;
+  animation-duration: 0.2s;
   animation-fill-mode: forwards;
+  display:none;
 }
 .show-tree-tab {
   animation-name: show-tree-t;
@@ -40,12 +37,13 @@
   from {left: 0;}
   to {left: -85%;}
 }
+
 #tree-tab-logo {
   margin: 0.5em 1em;
   user-select: none;
 }
 #tree-tab-box {
-  background-color: white;
+  background-color: var(--light);
   width: 90%;
   margin: auto;
   margin-top: 0.3em;
@@ -65,9 +63,13 @@
   text-align: left;
   background-color: transparent;
   font-size: 15px;
+  color: var(--content-txt-color);
 }
-.tree-tab-box-t:hover {
-  background-color: #f1f1f1;
+.tree-tab-box-t:hover{
+  opacity: 0.5;
+}
+.tree-tab-box-t-active {
+  background-color: var(--scrollbar-color);
 }
 
 @media (min-width:760px) {
@@ -77,9 +79,36 @@
 #tree-tab {
   width: 20%;
 }
-#tree-body {
+
+.tree-body {
   margin-left: 20%;
   width: 80%;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+.tree-shrink-body {
+  animation-name: tree-shrink-body;
+}
+.tree-expand-body {
+  animation-name: tree-expand-body;
+}
+@keyframes tree-shrink-body {
+  from {margin-left: 10%;}
+  to {margin-left: 20%;}
+}
+@keyframes tree-expand-body {
+  from {margin-left: 20%;}
+  to {margin-left: 10%;}
+}
+
+
+@keyframes show-tree-t {
+  from {left: -20%;}
+  to {left: 0;}
+}
+@keyframes hide-tree-t {
+  from {left: 0;}
+  to {left: -20%;}
 }
 
 .branch-content-box {
@@ -88,4 +117,5 @@
 .tree-content-box {
   width: 90%;
 }
+
 }

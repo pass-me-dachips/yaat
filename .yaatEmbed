@@ -1,0 +1,8 @@
+cp1 :::
+
+GET https://yaat.com/apis/app
+Content-Type: application/json
+
+{
+"User" : "Alexa12"
+}

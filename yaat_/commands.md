@@ -2,8 +2,8 @@
 
 ## commands
 
-- yaat
-- yaat o <name_of_file>
+- yaat [args...]
+- yaat o <name_of_file> [args...]
 - yaat init [args...]
 - yaat build <name_of_file>
 - yaat cat
@@ -13,15 +13,23 @@
 
 ## description
 
-### yaat
+### yaat [args...]
 
 build and display a yaat app. this build looks up the **.yaatconstruct** file to assemble the yaatfiles together.
 _this build display's the app in `tree` mode_.
 
-### yaat o <name_of_file>
+- args :
+  port- <option>
+- port- specifies a custom port to run yaat on.
+
+### yaat o <name_of_file> [a]
 
 build and display a single yaat file on your web browser
 _this build displays the file in `branch` mode_.
+
+- args :
+  port- <option>
+- port- specifies a custom port to run yaat on.
 
 ### yaat init [args...]
 

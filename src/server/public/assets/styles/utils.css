@@ -5,13 +5,14 @@
   top: 50%;
   margin-left: calc(-85% / 2);
   margin-top: calc(-18% / 2);
-  background-image: linear-gradient(30deg, rgba(249,249,249,1), rgba(241,241,255,1));
+  background-image: linear-gradient(30deg, var(--UTILS-BOX-COLORA), var(--UTILS-BOX-COLORB));
+  backdrop-filter: blur(35px);
   user-select: none;
   width: 85%;
   height: 18%;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  animation-duration: 0.4s;
+  animation-duration: 0.2s;
   animation-fill-mode: forwards;
 }
 .utils-blur-l {
@@ -46,7 +47,7 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: #d1d1d1;
+  background-color: var(--finder-name);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,14 +57,15 @@
   cursor: pointer;
 }
 .utils-minimixe:hover {
-  background-color: rgb(160, 194, 238);
+  background-color: var(--toogle-btn-color);
 }
 .util-theme-m-t {
   font-family: "Mulish-ExtraBold", sans-serif;
   padding: 0px 0.5em;
   padding-bottom: 0.3em;
   margin-top: 1em;
-  border-bottom : 1px solid rgba(100, 100, 100, 0.1);
+  border-bottom : 1px solid var(--utils-border-color);
+  color: var(--content-txt-color);
 }
 .toggle-container {
   position: relative;
@@ -92,13 +94,13 @@
   left: 2px;
   width: 21px;
   height: 21px;
-  background-color: #fff;
+  background-color: var(--light);
   border-radius: 50%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 }
 .toggle-input:checked ~ .toggle-label {
-  background-color: rgb(160, 194, 238);
+  background-color: var(--toogle-btn-color);
 }
 .toggle-input:checked ~ .toggle-label .toggle-handle {
   transform: translateX(20px);
@@ -115,6 +117,7 @@
 .util-theme-m-c-t {
   font-family: "outfit-r", sans-serif;
   font-size: 16px;
+  color: var(--content-txt-color);
 }
 
 
@@ -123,15 +126,17 @@
   text-align: center;
   margin-top: 0.5em;
   font-family: "outfit-r", sans-serif;
+  color: var(--content-txt-color);
 }
 #util-uptime-time-hmr {
   text-align: center;
   margin: auto;
   margin-top: 1em;
-  background-color: #e8e8e8;
+  background-color: var(--bg);
   width: 70%;
   padding: 10px;
   border-radius: 10px;
+  color: var(--content-txt-color);
 }
 
 
@@ -145,7 +150,7 @@
   margin-top: 0.7em;
 }
 .util-docinfo-m-c:hover {
-  background-color: rgb(199, 214, 228, 0.4);
+  background-color: var(--treetab-color);
 }
 
 
@@ -167,6 +172,13 @@
   margin-top: 2em;
 }
 
+
+.util-remove-util {
+  display: none;
+}
+/* #theme-util , #display-util , #uptime-util ,  #docinfo-util , #yaainfo-util {
+  display: none;
+} */
 
 
 @media (min-width:760px) {

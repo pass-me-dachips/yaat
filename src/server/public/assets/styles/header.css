@@ -10,12 +10,16 @@
   padding: 7px 0.5em;
   gap: 0.2em;
   user-select: none;
-  background-color: #e8e8e8;
-  border-bottom: 1px solid rgba(180,180,180,0.1);
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--header-border);
+}
+
+.header-logo:hover {
+  opacity: 0.5;
 }
 
 #finder-c {
-  background-color: rgba(150,150,150,0.2);
+  background-color: var(--finder-name);
   border-radius: 10px;
   padding: 3px 5px;
   display:flex;
@@ -32,6 +36,7 @@
   padding-left: 5px;
   font-family: "outfit-r" , sans-serif;
   font-size: 16px;
+  color: var(--content-txt-color);
 }
 #h-t {
   display: flex;
@@ -42,11 +47,14 @@
 .h-t-b {
   width: 30px;
   height: 30px;
-  background-color: rgba(240,240,250,0.6);
+  background-color: var(--tree-btn-color);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.h-t-b-tree:hover {
+  opacity: 0.5;
 }
 
 @media (min-width:760px) {
