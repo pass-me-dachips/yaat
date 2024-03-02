@@ -6,8 +6,8 @@ YAAT Commands
 
 : =  commands
 
-- yaat
-- yaat o <name_of_file>
+- yaat [args...]
+- yaat o <name_of_file> [args...]
 - yaat init [args...]
 - yaat build <name_of_file>
 - yaat cat
@@ -19,16 +19,24 @@ YAAT Commands
 : =  description
 
 
-${chalk.green("[+] yaat")} 
+${chalk.green("[+] yaat [args...]")} 
 
 build and display a yaat app. this build looks up the .yaatconstruct file to assemble the yaatfiles together.
 this build display's the app in \`tree\` mode.
 
+- args :
+  port- <option>
+- port- specifies the port your yaat application should run on (default = 6500).
 
-${chalk.green("[+] yaat o <name_of_file>")}
+
+${chalk.green("[+] yaat o <name_of_file> [args...]")}
 
 build and display a single yaat file on your web browser
 this build displays the file in \`branch\` mode.
+
+- args :
+  port- <option>
+- port- specifies the port your yaat application should run on (default = 6500).
 
 
 ${chalk.green("[+] yaat init [args...]")}
