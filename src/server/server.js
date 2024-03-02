@@ -1,6 +1,8 @@
 import express from "express";
 import { argv } from "node:process";
 import { join } from "node:path";
+import { stdWrite } from "../lib/std.js";
+import execBrowser from "../lib/execBrowser.js";
 
 // process.on("uncaughtException", (err) => {
 //   if (err.message.includes("address already in use")) {
@@ -11,14 +13,42 @@ import { join } from "node:path";
 //   }
 // });
 
-export default function startSever(tree, port) {
-  const server = express();
-  const cb = () => console.log(`yaat running on port ${port}`);
+const server = express();
+const cb = (port) => {
+  stdWrite(`yaat running on ${port} \n`);
 
+  const url = `http://localhost:${port}`;
+  stdWrite(`opening ${url} \n`, "blue");
+
+  const openBrowser = execBrowser(url);
+
+  if (openBrowser === true) {
+    // executed successfully
+    stdWrite(`[........] yaat`);
+  } else {
+    // unsupported platform
+    stdWrite(`Unsupported platform!`, "red");
+  }
+  return void 0;
+};
+
+export default function startSever(tree, port) {
   const staticPath = (lastDir) =>
     join(argv[1], "src", "server", "public", "assets", lastDir);
 
   server.use(express.static("public"));
+
+  server.use(
+    "/assets/scripts",
+    express.static(staticPath("scripts"), {
+      setHeaders: (res, path) => {
+        if (path.endsWith(".js")) {
+          res.setHeader("Content-Type", "text/javascript");
+        }
+      },
+    })
+  );
+
   server.use(
     "/assets/styles",
     express.static(staticPath("styles"), {
@@ -66,7 +96,7 @@ export default function startSever(tree, port) {
     });
   }
 
-  server.listen(port, cb);
+  server.listen(port, cb(port));
 
   return void 0;
 }
