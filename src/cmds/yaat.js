@@ -24,7 +24,7 @@ export default function yaat(port) {
 
     const ifEmbed = formatPath(formatedPath, ".yaatEmbed");
     const pathToYaatConstruct = formatPath(formatedPath, ".yaatconstruct");
-    // format path to .yaatconstruct
+    // format path to .yaatconstruct and .yaatEmbed
 
     stdWrite(...HEAD(`[-] Reading .yaatconstruct .....`));
     const yaatConstructContent = readFile(pathToYaatConstruct);
