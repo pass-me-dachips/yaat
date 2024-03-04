@@ -33,6 +33,15 @@ async function updateRoot(base) {
   }
 }
 
+function removeTabsActiveClases(base, ids) {
+  ids.split(",").forEach((elem) => {
+    const element = document.getElementById(elem);
+    element.classList.remove("tree-tab-box-t-active");
+  });
+  const selected = document.getElementById(base);
+  selected.classList.add("tree-tab-box-t-active");
+}
+
 const toogleNavigationbar = () => {
   const navigationMenu = document.getElementById("tree-tab");
   const treeBody = document.getElementById("tree-body");
@@ -82,7 +91,8 @@ function RestBody(tree, port) {
       const className = isActive
         ? "tree-tab-box-t tree-tab-box-t-active"
         : "tree-tab-box-t";
-      return `<button class="${className}" onclick="updateRoot('${data}')">${data}</button>`;
+
+      return `<button class="${className}" id="${data}" onclick="updateRoot('${data}'), removeTabsActiveClases('${data}', '${tree.files}')">${data}</button>`;
     };
 
     tree.files.map((elem, index) => {
