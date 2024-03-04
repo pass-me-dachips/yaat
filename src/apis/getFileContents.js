@@ -27,7 +27,7 @@ export default function getFileContents(base) {
       const Build = YAATCOMPOSE(...yaatOptions);
       // build ready
 
-      stdWrite(...HEAD(`Transferring ${basePath} to AppView`, "blue"));
+      stdWrite(...HEAD(`\nTransferring ${basePath} to AppView`, "yellow"));
       return Build;
     } else {
       throw {
