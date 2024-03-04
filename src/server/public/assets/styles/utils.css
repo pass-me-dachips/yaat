@@ -5,7 +5,7 @@
   top: 50%;
   margin-left: calc(-85% / 2);
   margin-top: calc(-18% / 2);
-  background-image: linear-gradient(30deg, var(--UTILS-BOX-COLORA), var(--UTILS-BOX-COLORB));
+  background-image: linear-gradient(30deg, var(--tint), var(--tintB));
   backdrop-filter: blur(35px);
   user-select: none;
   width: 85%;
@@ -118,6 +118,61 @@
   font-family: "outfit-r", sans-serif;
   font-size: 16px;
   color: var(--content-txt-color);
+}
+.util-theme-column-box {
+  margin: 0.7em 0.7em;
+}
+.util-theme-pallet-box {
+  display: flex;
+  flex-direction: row;
+  gap: 0.8em;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2em;
+}
+.util-theme-pallet-box button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  border: 4px solid transparent;
+  background-color: #ccc;
+}
+.util-theme-pallet-box button:hover {
+  border: 4px solid var(--toogle-btn-color);
+}
+#utils-theme-pallete-default {
+  background-color: var(--utils-theme-pallete-default);
+  border: 2px solid var(--toogle-btn-color);
+}
+#utils-theme-pallete-mercury {
+  background-color: var(--utils-theme-pallete-mercury);
+}
+#utils-theme-pallete-venus {
+  background-color: var(--utils-theme-pallete-venus);
+}
+#utils-theme-pallete-earth {
+  background-color: var(--utils-theme-pallete-earth);
+}
+#utils-theme-pallete-mars {
+  background-color: var(--utils-theme-pallete-mars);
+}
+#utils-theme-pallete-jupiter {
+  background-color: var(--utils-theme-pallete-jupiter);
+}
+#utils-theme-pallete-saturn {
+  background-color: var(--utils-theme-pallete-saturn);
+}
+#utils-theme-pallete-uranus {
+  background-color: var(--utils-theme-pallete-uranus);
+}
+#utils-theme-pallete-neptune {
+  background-color: var(--utils-theme-pallete-neptune);
+}
+#utils-theme-pallete-pluto {
+  background-color: var(--utils-theme-pallete-pluto);
 }
 
 

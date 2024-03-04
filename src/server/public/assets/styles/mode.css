@@ -13,7 +13,7 @@
 }
 .tree-tab {
   position: fixed;
-  background-color: var(--treetab-color);
+  background-color: var(--tintB);
   left: 0;
   top: 0;
   bottom: 0;
@@ -38,6 +38,9 @@
   to {left: -85%;}
 }
 
+.hideBranchLOGO {
+  visibility: hidden;
+}
 #tree-tab-logo {
   margin: 0.5em 1em;
   user-select: none;

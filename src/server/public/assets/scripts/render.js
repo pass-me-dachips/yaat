@@ -43,8 +43,10 @@ function removeTabsActiveClases(base, ids) {
 }
 
 const toogleNavigationbar = () => {
+  const branchHeader = document.getElementById("branch-header-logo");
   const navigationMenu = document.getElementById("tree-tab");
   const treeBody = document.getElementById("tree-body");
+  branchHeader.classList.toggle("hideBranchLOGO");
   treeBody.classList.toggle("tree-expand-body");
   navigationMenu.classList.toggle("hide-tree-tab");
 };

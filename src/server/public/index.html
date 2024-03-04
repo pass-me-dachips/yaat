@@ -14,7 +14,7 @@
 <body>
 
  <section id="header" class="header">
-  <img src="./assets/icons/yaat.svg" class="header-logo" onclick="toogleFooter()" />
+  <img src="./assets/icons/yaat.svg" class="header-logo hideBranchLOGO" onclick="toogleFooter()" id="branch-header-logo" />
   <div id="finder-c">
     <input type="text" placeholder="search words and sentences" />
     <img src="./assets/icons/search.svg" class="header-logo" />
@@ -51,19 +51,28 @@
  
 
 
- <section class="utils-blur-box util-remove-util" id="theme-util">
+ <section class="utils-blur-box utils-blur-xxl util-remove-util" id="theme-util">
   <button class="utils-minimixe" onclick="hideTab('theme-util')">
    <img src="./assets/icons/x.svg" />
   </button>
   <h3 class="util-theme-m-t">Themes</h3>
-  <div class="util-theme-m-c">
-    <div class="util-theme-m-c-t">Toogle Dark mode</div>
-    <div class="toggle-container">
-      <input type="checkbox" id="theme-theme" class="toggle-input">
-      <label for="theme-theme" class="toggle-label">
-      <span class="toggle-handle"></span>
-      </label>
+  <div class="util-theme-column-box">
+    <div class="util-theme-pallet-box">
+      <button id="utils-theme-pallete-default"></button>
+      <button id="utils-theme-pallete-mercury"></button>
+      <button id="utils-theme-pallete-venus"></button>
+      <button id="utils-theme-pallete-earth"></button>
+      <button id="utils-theme-pallete-mars"></button>
+      <button id="utils-theme-pallete-jupiter"></button>
+      <button id="utils-theme-pallete-saturn"></button>
+      <button id="utils-theme-pallete-uranus"></button>
+      <button id="utils-theme-pallete-neptune"></button>
+      <button id="utils-theme-pallete-pluto"></button>
     </div>
+    <div class="util-docinfo-m-c">
+      <div class="util-theme-m-c-t">Theme Name</div>
+      <h4 class="util-theme-m-c-t">Mecury</h4>
+    </div> 
   </div>
  </section>
  <!-- Themes -->
@@ -103,29 +112,6 @@
   </div>
  </section>
  <!-- uptime -->
- <section class="utils-blur-box utils-blur-xl util-remove-util" id="docinfo-util">
-  <button class="utils-minimixe" onclick="hideTab('docinfo-util')">
-   <img src="./assets/icons/x.svg" />
-  </button>
-  <h3 class="util-theme-m-t">Doc info</h3>
-  <div class="util-docinfo-m-c">
-    <div class="util-theme-m-c-t">Created At</div>
-    <h4 class="util-theme-m-c-t">03/02/2024</h4>
-  </div>
-  <div class="util-docinfo-m-c">
-    <div class="util-theme-m-c-t">Last Updated At</div>
-    <h4 class="util-theme-m-c-t">03/02/2024</h4>
-  </div>
-  <div class="util-docinfo-m-c">
-    <div class="util-theme-m-c-t">File count</div>
-    <h4 class="util-theme-m-c-t">11</h4>
-  </div>
-  <div class="util-docinfo-m-c">
-    <div class="util-theme-m-c-t">Words count</div>
-    <h4 class="util-theme-m-c-t">35,022</h4>
-  </div>
- </section>
- <!-- docinfo -->
  <section class="utils-blur-box utils-blur-xxl util-remove-util" id="yaainfo-util">
   <button class="utils-minimixe" onclick="hideTab('yaainfo-util')">
    <img src="./assets/icons/x.svg" />

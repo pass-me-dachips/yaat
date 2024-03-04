@@ -13,7 +13,7 @@
   align-items: center;
   overflow: auto;
   gap: 2em;
-  background-color: var(--tint);
+  background-image: linear-gradient(30deg, var(--tint), var(--tintB));
   user-select: none;
   backdrop-filter: blur(25px);
   z-index: 2;
@@ -52,7 +52,7 @@
 .f-t-c-t {
   color: var(--f-color);
   font-family: "outfit-r", sans-serif;
-  font-size: 14.7px;
+  font-size: 15.5px;
 }
 
 #display {
