@@ -3,6 +3,7 @@ import { argv } from "node:process";
 import { join } from "node:path";
 import { stdWrite } from "../lib/std.js";
 import execBrowser from "../lib/execBrowser.js";
+import getFileContents from "../apis/getFileContents.js";
 
 // process.on("uncaughtException", (err) => {
 //   if (err.message.includes("address already in use")) {
@@ -91,7 +92,8 @@ export default function startSever(tree, port) {
   });
 
   if (tree.type === "tree") {
-    server.get("/apis/tree", (req, res) => {
+    server.get("/apis/tree/:title", (req, res) => {
+      const tree = getFileContents(req.params.title);
       res.status(200).json(tree);
     });
   }

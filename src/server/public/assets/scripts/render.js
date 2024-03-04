@@ -1,14 +1,11 @@
 //
 
-// activeFile: 0,
-// files: ["introduction", "installation", "useCases"],
+const port = window.location.href.split("http://localhost:")[1].split("/")[0];
+const url = `http://localhost:${port}`;
 
 (async () => {
   try {
-    const port = window.location.href
-      .split("http://localhost:")[1]
-      .split("/")[0];
-    const response = await fetch(`http://localhost:${port}/apis`, {
+    const response = await fetch(url + "/apis", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -20,6 +17,23 @@
     console.error(error);
   }
 })();
+
+async function updateRoot(base) {
+  try {
+    const response = await fetch(url + `/apis/tree/${base}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    console.log(await response.json());
+    // const tree = await response.json();
+    // RestBody(tree, port);
+  } catch (error) {
+    console.error(error);
+  }
+}
+updateRoot("Base");
 
 const toogleNavigationbar = () => {
   const navigationMenu = document.getElementById("tree-tab");
