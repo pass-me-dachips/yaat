@@ -42,5 +42,3 @@ export default function getFileContents(base) {
     };
   }
 }
-
-getFileContents("Application");
