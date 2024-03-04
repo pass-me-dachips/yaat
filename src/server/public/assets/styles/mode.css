@@ -64,12 +64,15 @@
   background-color: transparent;
   font-size: 15px;
   color: var(--content-txt-color);
+  cursor: pointer;
 }
 .tree-tab-box-t:hover{
   opacity: 0.5;
+  cursor: pointer;
 }
 .tree-tab-box-t-active {
   background-color: var(--scrollbar-color);
+  cursor: pointer;
 }
 
 @media (min-width:760px) {

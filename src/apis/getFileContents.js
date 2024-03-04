@@ -10,9 +10,8 @@ const HEAD = (m, col) => [m, col ?? "yellow", true, false];
 
 export default function getFileContents(base) {
   if (fsExists("docs")) {
-    chdir("docs");
-
-    const pathToYaatConstruct = formatPath(cwd(), ".yaatconstruct");
+    const currentPath = formatPath(cwd(), "docs");
+    const pathToYaatConstruct = formatPath(currentPath, ".yaatconstruct");
     const yaatConstructContent = readFile(pathToYaatConstruct);
     const yaatFiles = construct(yaatConstructContent);
 
@@ -21,8 +20,8 @@ export default function getFileContents(base) {
       const basePath = yaatFiles[baseIndex + 1];
       // get path to base title parsed
 
-      const formatedPath = formatPath(cwd(), basePath);
-      const ifEmbed = formatPath(cwd(), ".yaatEmbed");
+      const formatedPath = formatPath(currentPath, basePath);
+      const ifEmbed = formatPath(currentPath, ".yaatEmbed");
       const yaatOptions = [formatedPath, "tree", ifEmbed];
       const Build = YAATCOMPOSE(...yaatOptions);
       // build ready

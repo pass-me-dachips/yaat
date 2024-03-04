@@ -92,13 +92,15 @@ export default function startSever(tree, port) {
   });
 
   if (tree.type === "tree") {
-    server.get("/apis/tree/:title", (req, res) => {
-      const tree = getFileContents(req.params.title);
-      res.status(200).json(tree);
+    server.get("/apis/tree/:title", async (req, res) => {
+      try {
+        const tree = getFileContents(req.params.title);
+        res.status(200).json(tree);
+      } catch (error) {
+        res.status(500).json({ error: error.message });
+      }
     });
   }
 
   server.listen(port, cb(port));
-
-  return void 0;
 }

@@ -14,7 +14,7 @@ const url = `http://localhost:${port}`;
     const tree = await response.json();
     RestBody(tree, port);
   } catch (error) {
-    console.error(error);
+    console.log(error.message);
   }
 })();
 
@@ -26,14 +26,12 @@ async function updateRoot(base) {
         "Content-Type": "application/json",
       },
     });
-    console.log(await response.json());
-    // const tree = await response.json();
-    // RestBody(tree, port);
+    const tree = await response.json();
+    renderYaat(tree.body, "tree-cont-body", tree.embededCode);
   } catch (error) {
-    console.error(error);
+    console.log(error.message);
   }
 }
-updateRoot("Base");
 
 const toogleNavigationbar = () => {
   const navigationMenu = document.getElementById("tree-tab");
@@ -84,7 +82,7 @@ function RestBody(tree, port) {
       const className = isActive
         ? "tree-tab-box-t tree-tab-box-t-active"
         : "tree-tab-box-t";
-      return `<button class="${className}" onclick="renderYaat(tree.body, 'tree-cont-body', tree.embededCode)">${data}</button>`;
+      return `<button class="${className}" onclick="updateRoot('${data}')">${data}</button>`;
     };
 
     tree.files.map((elem, index) => {
@@ -95,157 +93,154 @@ function RestBody(tree, port) {
     navigationMenu.style.display = "block";
   }
   // fetch docs
-
-  function renderYaat(treeBody, location, embededCode) {
-    // do work
-    const body = document.getElementById(location);
-    body.innerHTML = "";
-
-    const createTitleNode = (content) => {
-      const title = document.createElement("h1");
-      title.textContent = content;
-      title.id = "title302";
-      return title;
-    };
-    // create title
-
-    const createSectionNode = (sectionIndex) => {
-      const section = document.createElement("section");
-      section.id = sectionIndex;
-      section.classList.add("section395");
-      return section;
-    };
-    // create section
-
-    const createHeaderNode = (content) => {
-      const header = document.createElement("h2");
-      header.textContent = content;
-      header.classList.add("header202");
-      return header;
-    };
-    // create header
-
-    const createSubHeaderNode = (content) => {
-      const sub_header = document.createElement("h3");
-      sub_header.textContent = content;
-      sub_header.classList.add("header202");
-      sub_header.classList.add("subheader9s9");
-      return sub_header;
-    };
-    // create subheader
-
-    const createTextNode = (content) => {
-      const text = document.createElement("p");
-      content = content.replaceAll(
-        "[[ ",
-        `<span class="inline-texts bold302">`
-      );
-      content = content.replaceAll("{{ ", `<span class="inline-texts ed292">`);
-      content = content.replaceAll("(( ", `<span class="inline-texts wi2992">`);
-      content = content.replaceAll(
-        "<< ",
-        `<span class="inline-texts inlinecode">`
-      );
-      content = content.replaceAll(" ]]", `</span>`);
-      content = content.replaceAll(" }}", `</span>`);
-      content = content.replaceAll(" ))", `</span>`);
-      content = content.replaceAll(" >>", `</span>`);
-      text.innerHTML = content;
-      text.classList.add("text202");
-      return text;
-    };
-    // create text
-
-    const createListNode = (content) => {
-      const list = document.createElement("li");
-      list.textContent = content;
-      list.classList.add("text202");
-      list.classList.add("lista03");
-      return list;
-    };
-    // create list
-
-    const createInfoNode = (content) => {
-      const info = document.createElement("div");
-      info.textContent = content;
-      info.classList.add("text202");
-      info.classList.add("info020");
-      return info;
-    };
-    // create info
-
-    const createComputerCodeNode = (code, title) => {
-      const ccBody = document.createElement("div");
-      ccBody.classList.add("computerCode302");
-
-      const ccTitle = document.createElement("div");
-      ccTitle.textContent = title;
-      ccTitle.classList.add("computerCode-header");
-
-      const ccCopyBtn = document.createElement("button");
-      ccCopyBtn.textContent = "copy";
-      ccCopyBtn.classList.add("computerCode-header-cpbtn");
-      ccCopyBtn.addEventListener("click", (e) => {
-        copyToClipboard(code);
-        ccCopyBtn.textContent = "copied";
-      });
-
-      ccTitle.appendChild(ccCopyBtn);
-      // ccTtle.
-
-      const ccPre = document.createElement("pre");
-      ccPre.textContent = code;
-      ccPre.classList.add("computerCode-computerCode");
-
-      ccBody.appendChild(ccTitle);
-      ccBody.appendChild(ccPre);
-
-      return ccBody;
-    };
-    // create computercode
-
-    treeBody.children.forEach((elem) => {
-      const { type, content, index, childOf } = elem;
-      if (type === "title::") {
-        const title = createTitleNode(content);
-        body.appendChild(title);
-      } else if (type === "sec::") {
-        const section = createSectionNode(index);
-        body.appendChild(section);
-      } else if (type === "hl::") {
-        const header = createHeaderNode(content);
-        document.getElementById(`${childOf}`).appendChild(header);
-      } else if (type === "hx::") {
-        const sub_header = createSubHeaderNode(content);
-        document.getElementById(`${childOf}`).appendChild(sub_header);
-      } else if (type === "text::") {
-        let textContent = `${content}`;
-        const text = createTextNode(textContent);
-        document.getElementById(`${childOf}`).appendChild(text);
-      } else if (type === "info::") {
-        const info = createInfoNode(content);
-        document.getElementById(`${childOf}`).appendChild(info);
-      } else if (type === "list::") {
-        const list = createListNode(content);
-        document.getElementById(`${childOf}`).appendChild(list);
-      } else if (type === "computerCode::") {
-        const code = content[0],
-          title = content[1];
-        if (
-          content &&
-          content.length === 2 &&
-          code &&
-          title &&
-          embededCode.isConent === true
-        ) {
-          const computerCode = createComputerCodeNode(
-            embededCode.body[code],
-            title
-          );
-          document.getElementById(`${childOf}`).appendChild(computerCode);
-        }
-      }
-    });
-  }
-  // render Yaat
 }
+
+function renderYaat(treeBody, location, embededCode) {
+  // do work
+  const body = document.getElementById(location);
+  body.innerHTML = "";
+
+  const createTitleNode = (content) => {
+    const title = document.createElement("h1");
+    title.textContent = content;
+    title.id = "title302";
+    return title;
+  };
+  // create title
+
+  const createSectionNode = (sectionIndex) => {
+    const section = document.createElement("section");
+    section.id = sectionIndex;
+    section.classList.add("section395");
+    return section;
+  };
+  // create section
+
+  const createHeaderNode = (content) => {
+    const header = document.createElement("h2");
+    header.textContent = content;
+    header.classList.add("header202");
+    return header;
+  };
+  // create header
+
+  const createSubHeaderNode = (content) => {
+    const sub_header = document.createElement("h3");
+    sub_header.textContent = content;
+    sub_header.classList.add("header202");
+    sub_header.classList.add("subheader9s9");
+    return sub_header;
+  };
+  // create subheader
+
+  const createTextNode = (content) => {
+    const text = document.createElement("p");
+    content = content.replaceAll("[[ ", `<span class="inline-texts bold302">`);
+    content = content.replaceAll("{{ ", `<span class="inline-texts ed292">`);
+    content = content.replaceAll("(( ", `<span class="inline-texts wi2992">`);
+    content = content.replaceAll(
+      "<< ",
+      `<span class="inline-texts inlinecode">`
+    );
+    content = content.replaceAll(" ]]", `</span>`);
+    content = content.replaceAll(" }}", `</span>`);
+    content = content.replaceAll(" ))", `</span>`);
+    content = content.replaceAll(" >>", `</span>`);
+    text.innerHTML = content;
+    text.classList.add("text202");
+    return text;
+  };
+  // create text
+
+  const createListNode = (content) => {
+    const list = document.createElement("li");
+    list.textContent = content;
+    list.classList.add("text202");
+    list.classList.add("lista03");
+    return list;
+  };
+  // create list
+
+  const createInfoNode = (content) => {
+    const info = document.createElement("div");
+    info.textContent = content;
+    info.classList.add("text202");
+    info.classList.add("info020");
+    return info;
+  };
+  // create info
+
+  const createComputerCodeNode = (code, title) => {
+    const ccBody = document.createElement("div");
+    ccBody.classList.add("computerCode302");
+
+    const ccTitle = document.createElement("div");
+    ccTitle.textContent = title;
+    ccTitle.classList.add("computerCode-header");
+
+    const ccCopyBtn = document.createElement("button");
+    ccCopyBtn.textContent = "copy";
+    ccCopyBtn.classList.add("computerCode-header-cpbtn");
+    ccCopyBtn.addEventListener("click", (e) => {
+      copyToClipboard(code);
+      ccCopyBtn.textContent = "copied";
+    });
+
+    ccTitle.appendChild(ccCopyBtn);
+    // ccTtle.
+
+    const ccPre = document.createElement("pre");
+    ccPre.textContent = code;
+    ccPre.classList.add("computerCode-computerCode");
+
+    ccBody.appendChild(ccTitle);
+    ccBody.appendChild(ccPre);
+
+    return ccBody;
+  };
+  // create computercode
+
+  treeBody.children.forEach((elem) => {
+    const { type, content, index, childOf } = elem;
+    if (type === "title::") {
+      const title = createTitleNode(content);
+      body.appendChild(title);
+    } else if (type === "sec::") {
+      const section = createSectionNode(index);
+      body.appendChild(section);
+    } else if (type === "hl::") {
+      const header = createHeaderNode(content);
+      document.getElementById(`${childOf}`).appendChild(header);
+    } else if (type === "hx::") {
+      const sub_header = createSubHeaderNode(content);
+      document.getElementById(`${childOf}`).appendChild(sub_header);
+    } else if (type === "text::") {
+      let textContent = `${content}`;
+      const text = createTextNode(textContent);
+      document.getElementById(`${childOf}`).appendChild(text);
+    } else if (type === "info::") {
+      const info = createInfoNode(content);
+      document.getElementById(`${childOf}`).appendChild(info);
+    } else if (type === "list::") {
+      const list = createListNode(content);
+      document.getElementById(`${childOf}`).appendChild(list);
+    } else if (type === "computerCode::") {
+      const code = content[0],
+        title = content[1];
+      if (
+        content &&
+        content.length === 2 &&
+        code &&
+        title &&
+        embededCode.isConent === true
+      ) {
+        const computerCode = createComputerCodeNode(
+          embededCode.body[code],
+          title
+        );
+        document.getElementById(`${childOf}`).appendChild(computerCode);
+      }
+    }
+  });
+}
+// render Yaat
