@@ -97,3 +97,9 @@ body::-webkit-scrollbar-thumb {
   padding: 0;
   margin: 0;
 }
+*::selection {
+    background-color: white;
+    color: black; 
+    border-radius: 7px; 
+    border: 1px rgba(200, 200, 200, 0.5); 
+}
