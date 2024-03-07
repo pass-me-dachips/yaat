@@ -86,3 +86,11 @@ const checkboxforFsize = document.getElementById("display-size");
 const checkboxforFfamily = document.getElementById("display-font");
 checkboxforFsize.addEventListener("change", toggleLargerFonts);
 checkboxforFfamily.addEventListener("change", toggleFontFamily);
+
+function search() {
+  const searchBarValue = document.getElementById("search-bar").value;
+  const url = window.location.href.split("#")[0];
+
+  window.location.href = url + `#${searchBarValue}`;
+}
+// find function

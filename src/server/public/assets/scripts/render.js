@@ -255,4 +255,4 @@ function renderYaat(treeBody, location, embededCode) {
     }
   });
 }
-// render Yaat
+// renderYaat
