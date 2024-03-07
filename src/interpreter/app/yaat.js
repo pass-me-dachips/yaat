@@ -86,6 +86,7 @@ function AST(token) {
 
   return tree;
 }
+// AST => Short for Another syntax tree (on this project).
 
 export default function yaatTree(yaat, fileName) {
   if (yaat && fileName) {

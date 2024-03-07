@@ -25,7 +25,7 @@ const cb = (port) => {
 
   if (openBrowser === true) {
     // executed successfully
-    stdWrite(`[........] yaat`);
+    stdWrite(`---> App running`, "green", true, true);
   } else {
     // unsupported platform
     stdWrite(`Unsupported platform!`, "red");
