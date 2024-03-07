@@ -75,6 +75,9 @@
 
   --utils-theme-pallete-pluto: rgba(200,200, 200, 1);
   --utils-theme-pallete-pluto-tint: rgba(200,200, 200, 0.1);
+
+  --yaatText-fsize: 17px;
+  --yaatText-family: 'nunito-r', sans-serif;
 }
 
 body {

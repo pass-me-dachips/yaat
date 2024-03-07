@@ -36,3 +36,24 @@ function setThemeName(palleteId, displayName) {
   const Location = document.getElementById("util-theme-pallet-box");
   themes.map((elem) => (Location.innerHTML += btn(elem)));
 })();
+
+function toggleLargerFonts() {
+  const root = document.documentElement;
+  const checkbox = document.getElementById("display-size");
+  const isChecked = checkbox.checked;
+  root.style.setProperty("--yaatText-fsize", isChecked ? "20px" : "17px");
+}
+function toggleFontFamily() {
+  const root = document.documentElement;
+  const checkbox = document.getElementById("display-font");
+  const isChecked = checkbox.checked;
+  root.style.setProperty(
+    "--yaatText-family",
+    isChecked ? "'Mulish-ExtraBold', sans-serif" : "'nunito-r', sans-serif"
+  );
+}
+
+const checkboxforFsize = document.getElementById("display-size");
+const checkboxforFfamily = document.getElementById("display-font");
+checkboxforFsize.addEventListener("change", toggleLargerFonts);
+checkboxforFfamily.addEventListener("change", toggleFontFamily);
