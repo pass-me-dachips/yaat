@@ -37,6 +37,35 @@ function setThemeName(palleteId, displayName) {
   themes.map((elem) => (Location.innerHTML += btn(elem)));
 })();
 
+function timerFormater(timer) {
+  function formatTime(int) {
+    return int < 10 ? "0" + int : int;
+  }
+  const output = { hours: "", minute: "", second: "" };
+  let howManyminutes = Math.floor(timer / 60);
+  const howManySeconds = Math.round(timer % 60);
+  const howManyhours = Math.floor(howManyminutes / 60);
+  if (howManyhours) {
+    howManyminutes -= 60 * howManyhours;
+  }
+  output.hours = formatTime(howManyhours);
+  output.minute = formatTime(howManyminutes);
+  output.second = formatTime(howManySeconds);
+
+  return output;
+}
+
+(() => {
+  let timer = 0;
+  const uptime = (time) => `${time.hours}:${time.minute}:${time.second}`;
+  const location = document.getElementById("util-uptime-timmer");
+
+  setInterval(() => {
+    timer += 1;
+    location.innerHTML = uptime(timerFormater(timer));
+  }, 1000);
+})();
+
 function toggleLargerFonts() {
   const root = document.documentElement;
   const checkbox = document.getElementById("display-size");
