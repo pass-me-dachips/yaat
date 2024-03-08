@@ -196,7 +196,7 @@ function renderYaat(treeBody, location, embededCode) {
     ccCopyBtn.textContent = "copy";
     ccCopyBtn.classList.add("computerCode-header-cpbtn");
     ccCopyBtn.addEventListener("click", (e) => {
-      copyToClipboard(code);
+      navigator.clipboard.writeText(code);
       ccCopyBtn.textContent = "copied";
     });
 
