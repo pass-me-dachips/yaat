@@ -9,7 +9,7 @@
  */
 import { readFile } from "./fsRead.js";
 import yaatTree from "../interpreter/app/yaat.js";
-import embed from "../interpreter/configs/embbed.js";
+import embed from "../interpreter/configs/embed.js";
 
 export default function YAATCOMPOSE(path, buildType, buildEmbed) {
   if (path && buildType && (buildType === "tree" || buildType === "branch")) {
