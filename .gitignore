@@ -4,6 +4,4 @@ node_modules/
 package-lock.json
 
 docs/
-app.yaat
-.yaatEmbed
 .rest
