@@ -4,6 +4,7 @@ import { join } from "node:path";
 import { stdWrite } from "../lib/std.js";
 import execBrowser from "../lib/execBrowser.js";
 import getFileContents from "../apis/getFileContents.js";
+import publicGETFC from "../apis/publicGetFC.js";
 
 // process.on("uncaughtException", (err) => {
 //   if (err.message.includes("address already in use")) {
@@ -95,6 +96,17 @@ export default function startSever(tree, port) {
     server.get("/apis/tree/:title", async (req, res) => {
       try {
         const tree = getFileContents(req.params.title);
+        res.status(200).json(tree);
+      } catch (error) {
+        res.status(500).json({ error: error.message });
+      }
+    });
+  }
+
+  if (tree?.asDocs) {
+    server.get("/apis/docs/:title", async (req, res) => {
+      try {
+        const tree = publicGETFC(req.params.title);
         res.status(200).json(tree);
       } catch (error) {
         res.status(500).json({ error: error.message });

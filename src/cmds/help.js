@@ -1,79 +1,52 @@
-import chalk from "chalk";
+// help
+import formatPath from "../lib/formatPath.js";
+import { stdWrite } from "../lib/std.js";
+import YAATCOMPOSE from "../lib/YAATCOMPOSE.js";
+import { defaultPort } from "../templates/config.js";
+import startSever from "../server/server.js";
+import { readFile } from "../lib/fsRead.js";
+import construct from "../interpreter/configs/construct.js";
 
-export default function help() {
-  let stdoutput = `
-YAAT Commands
+const HEAD = (m, col) => [m, col ?? "green", true, false];
 
-: =  commands
+export default function help(root) {
+  stdWrite("Yaat! another anotation tool \n");
 
-- yaat [args...]
-- yaat o <name_of_file> [args...]
-- yaat init [args...]
-- yaat build <name_of_file>
-- yaat cat
-- yaat help
-- yaat info
-- yaat chuser <new_user>
+  const formatedPath = formatPath(root, ".public");
+  // format path to .public
 
+  const ifEmbed = formatPath(formatedPath, ".yaatEmbed");
+  const pathToYaatConstruct = formatPath(formatedPath, ".yaatconstruct");
+  // format path to .yaatconstruct and .yaatEmbed
 
-: =  description
+  const yaatConstructContent = readFile(pathToYaatConstruct);
+  const yaatFiles = construct(yaatConstructContent);
+  // read and construct .yaatconstruct
 
+  if (yaatFiles[1]) {
+    // only if there is a path to the first page.
+    const yaatOptions = [
+      formatPath(formatedPath, yaatFiles[1]),
+      "tree",
+      ifEmbed,
+    ];
+    const Build = YAATCOMPOSE(...yaatOptions);
+    Build["type"] = "tree";
+    Build["asDocs"] = true;
+    Build["activeFile"] = 0;
+    Build["files"] = yaatFiles.filter((e, index) => index % 2 === 0);
+    // build ready
 
-${chalk.green("[+] yaat [args...]")} 
-
-build and display a yaat app. this build looks up the .yaatconstruct file to assemble the yaatfiles together.
-this build display's the app in \`tree\` mode.
-
-- args :
-  port- <option>
-- port- specifies the port your yaat application should run on (default = 6500).
-
-
-${chalk.green("[+] yaat o <name_of_file> [args...]")}
-
-build and display a single yaat file on your web browser
-this build displays the file in \`branch\` mode.
-
-- args :
-  port- <option>
-- port- specifies the port your yaat application should run on (default = 6500).
-
-
-${chalk.green("[+] yaat init [args...]")}
-
-creates a bare metal yaatapp.
-
-- args :
-  m- <option>
-  t- <option>
-- m- specifies the mode of the app. option can only be <tree> or <branch>.
-- t- specifies the title of the app \`optional\`, cannot include whitespaces.
-
-
-${chalk.green("[+] yaat build <name_of_file>")}
-
-display's the engine-built tree format of the yaatfile.
-
-
-${chalk.green("[+] yaat cat")}
-
-display's the <.yaatconstruct> file as an object.
-
-
-${chalk.green("[+] yaat help")}
-
-shows list of commands and usage.
-
-
-${chalk.green("[+] yaat info")}
-
-display's the yaat about info.
-
-
-${chalk.green("[+] yaat chuser <new_user>")}
-
-change's the yaat's current user. default is <yaat@no-user> `;
-
-  console.log(stdoutput);
-  return void 0;
+    let portToUse = defaultPort;
+    stdWrite(...HEAD(`\nStarting app on port  ${defaultPort}`, "blue"));
+    startSever(Build, portToUse);
+    // start the server and parse the tree
+  } else {
+    stdWrite(
+      ...HEAD(
+        `[x] Cannot read arg[1] of .yaatconstruct: expected a file path, got null.`,
+        "red"
+      )
+    );
+  }
 }

@@ -40,7 +40,7 @@ if (yaatPortion.length === 0 || yaatPortion[0] === "port-") {
       cat();
       break;
     case "help":
-      help();
+      help(cmds[1]);
       break;
     case "info":
       info();

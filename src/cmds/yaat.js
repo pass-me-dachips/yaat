@@ -46,6 +46,7 @@ export default function yaat(port) {
       stdWrite(...HEAD(`[-] Composing Application...`));
       const Build = YAATCOMPOSE(...yaatOptions);
       Build["type"] = "tree";
+      Build["asDocs"] = false;
       Build["activeFile"] = 0;
       Build["files"] = yaatFiles.filter((e, index) => index % 2 === 0);
       stdWrite(...HEAD(`[/] Composed ${formatedPath} Successfully!`));

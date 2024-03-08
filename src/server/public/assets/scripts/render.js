@@ -18,9 +18,10 @@ const url = `http://localhost:${port}`;
   }
 })();
 
-async function updateRoot(base) {
+async function updateRoot(base, asDocs) {
+  const urlpath = asDocs === "Yes" ? "docs" : "tree";
   try {
-    const response = await fetch(url + `/apis/tree/${base}`, {
+    const response = await fetch(url + `/apis/${urlpath}/${base}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -81,8 +82,10 @@ function RestBody(tree, port) {
     // tree
     const treeBody = document.getElementById("tree-body");
     const headerMode = document.getElementById("header-mode");
+    const branchHeaderLogo = document.getElementById("branch-header-logo");
     treeBody.style.display = "block";
     setMode(tree.type);
+    branchHeaderLogo.classList.add("hideBranchLOGO");
     headerMode.addEventListener("click", toogleNavigationbar);
     fetchDocs(tree);
     renderYaat(tree.body, "tree-cont-body", tree.embededCode);
@@ -96,7 +99,11 @@ function RestBody(tree, port) {
         ? "tree-tab-box-t tree-tab-box-t-active"
         : "tree-tab-box-t";
 
-      return `<button class="${className}" id="${data}" onclick="updateRoot('${data}'), removeTabsActiveClases('${data}', '${tree.files}')">${data}</button>`;
+      return `<button class="${className}" id="${data}" onclick="updateRoot('${data}', '${
+        tree?.asDocs ? "Yes" : "No"
+      }'), removeTabsActiveClases('${data}', '${
+        tree.files
+      }')">${data}</button>`;
     };
 
     tree.files.map((elem, index) => {

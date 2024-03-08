@@ -1,4 +1,4 @@
-import { chdir, cwd } from "node:process";
+import { cwd } from "node:process";
 import formatPath from "../lib/formatPath.js";
 import { stdWrite } from "../lib/std.js";
 import YAATCOMPOSE from "../lib/YAATCOMPOSE.js";
