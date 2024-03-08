@@ -1,12 +1,12 @@
 import { cwd } from "node:process";
-import formatPath from "../lib/formatPath.js";
 import { readFile } from "../lib/fsRead.js";
 import yaatTree from "../interpreter/app/yaat.js";
 import { stdWrite } from "../lib/std.js";
+import basePath from "../lib/basePath.js";
 
 export default function build(path) {
   if (path) {
-    const formatedPath = formatPath(cwd(), path);
+    const formatedPath = basePath(cwd(), path);
 
     const HEAD = (header) => [`[*] ${header} `, "blue", false, false];
     const BODY = () => [`[Done]`, "white", true, false];
