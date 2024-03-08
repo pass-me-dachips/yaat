@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 // Yaat! Another Annotation Technology.
+import { stdWrite } from "./src/lib/std.js";
 import { argv } from "node:process";
 import yaat from "./src/cmds/yaat.js";
 import o from "./src/cmds/o.js";
@@ -10,6 +11,11 @@ import cat from "./src/cmds/cat.js";
 import help from "./src/cmds/help.js";
 import info from "./src/cmds/info.js";
 import chuser from "./src/cmds/chuser.js";
+
+process.on("uncaughtException", (error) => {
+  const options = ["\n\n" + error.message, "red", true, false];
+  stdWrite(...options);
+});
 
 const cmds = argv;
 const yaatPortion = cmds.slice(2);
