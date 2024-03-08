@@ -16,8 +16,8 @@
  <section id="header" class="header">
   <img src="./assets/icons/yaat.svg" class="header-logo hideBranchLOGO" onclick="toogleFooter()" id="branch-header-logo" />
   <div id="finder-c">
-    <input type="text" placeholder="search words and sentences" />
-    <img src="./assets/icons/search.svg" class="header-logo" />
+    <input type="text" id="search-bar" placeholder="Route-to Section By Id" />
+    <img src="./assets/icons/search.svg" onclick="search()" class="header-logo" />
   </div>
   <div id="h-t">
     <div class="h-t-b" id="header-mode" onclick="toogleNavigationbar()"></div>
@@ -57,21 +57,10 @@
   </button>
   <h3 class="util-theme-m-t">Themes</h3>
   <div class="util-theme-column-box">
-    <div class="util-theme-pallet-box">
-      <button id="utils-theme-pallete-default"></button>
-      <button id="utils-theme-pallete-mercury"></button>
-      <button id="utils-theme-pallete-venus"></button>
-      <button id="utils-theme-pallete-earth"></button>
-      <button id="utils-theme-pallete-mars"></button>
-      <button id="utils-theme-pallete-jupiter"></button>
-      <button id="utils-theme-pallete-saturn"></button>
-      <button id="utils-theme-pallete-uranus"></button>
-      <button id="utils-theme-pallete-neptune"></button>
-      <button id="utils-theme-pallete-pluto"></button>
-    </div>
+    <div class="util-theme-pallet-box" id="util-theme-pallet-box"></div>
     <div class="util-docinfo-m-c">
       <div class="util-theme-m-c-t">Theme Name</div>
-      <h4 class="util-theme-m-c-t">Mecury</h4>
+      <h4 class="util-theme-m-c-t" id="theme-name-location">Default</h4>
     </div> 
   </div>
  </section>
@@ -108,7 +97,7 @@
   <h3 class="util-theme-m-t">Uptime</h3>
   <div>
     <h2 id="util-uptime-timmer">00:00:00</h2>
-    <h4 id="util-uptime-time-hmr">5 minutes read</h4>
+    <h4 id="util-uptime-time-hmr">HH - MM - SS</h4>
   </div>
  </section>
  <!-- uptime -->
@@ -135,6 +124,7 @@
 
  <script src="./assets/scripts/index.js"></script>
  <script src="./assets/scripts/render.js"></script>
+ <script src="./assets/scripts/utils.js"></script>
  
 </body>
 </html>

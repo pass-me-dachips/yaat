@@ -145,7 +145,7 @@
 }
 #utils-theme-pallete-default {
   background-color: var(--utils-theme-pallete-default);
-  border: 2px solid var(--toogle-btn-color);
+  border: 2px solid var(--utils-theme-pallete-default);
 }
 #utils-theme-pallete-mercury {
   background-color: var(--utils-theme-pallete-mercury);

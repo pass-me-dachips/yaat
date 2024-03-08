@@ -16,7 +16,7 @@
 
 .header202 {
   font-family: 'Montserrat-SemiBold', sans-serif;
-  line-height: 1.5;     
+  line-height: 1.7;     
   margin-bottom: 0.4em;
   font-size: 23px;
   color: var(--content-txt-color); 
@@ -28,9 +28,9 @@
 }
 
 .text202 {
-  font-family: 'nunito-r', sans-serif;
+  font-family: var(--yaatText-family);
   line-height: 1.6;     
-  font-size: 17px;  
+  font-size: var(--yaatText-fsize);  
   color: var(--content-txt-color);  
 }
 
@@ -120,5 +120,4 @@
 #title302 {
   padding: 0.2em 0.5em;
 }
-
 }

@@ -13,7 +13,7 @@
 }
 .tree-tab {
   position: fixed;
-  background-color: var(--tintB);
+  background-color: var(--light);
   left: 0;
   top: 0;
   bottom: 0;
@@ -22,6 +22,16 @@
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
   display:none;
+  overflow-y: auto;
+}
+
+.tree-tab::-webkit-scrollbar {
+  width: 0.5em;
+  background-color: white;
+}
+.tree-tab::-webkit-scrollbar-thumb {
+  background-color: var(--tintB);
+  border-radius: 10px;
 }
 .show-tree-tab {
   animation-name: show-tree-t;
@@ -46,8 +56,7 @@
   user-select: none;
 }
 #tree-tab-box {
-  background-color: var(--light);
-  width: 90%;
+  width: 97%;
   margin: auto;
   margin-top: 0.3em;
   border-radius: 10px;
