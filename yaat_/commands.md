@@ -17,6 +17,7 @@
 
 build and display a yaat app. this build looks up the **.yaatconstruct** file to assemble the yaatfiles together.
 _this build display's the app in `tree` mode_.
+looks up the docs dir from your cwd
 
 - args :
   port- <option>

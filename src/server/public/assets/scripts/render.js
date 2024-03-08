@@ -80,8 +80,10 @@ function RestBody(tree, port) {
   } else {
     // tree
     const treeBody = document.getElementById("tree-body");
+    const headerMode = document.getElementById("header-mode");
     treeBody.style.display = "block";
     setMode(tree.type);
+    headerMode.addEventListener("click", toogleNavigationbar);
     fetchDocs(tree);
     renderYaat(tree.body, "tree-cont-body", tree.embededCode);
   }
