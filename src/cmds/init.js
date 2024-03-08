@@ -3,16 +3,10 @@ import argsParser from "../lib/argsParser.js";
 import formatPath from "../lib/formatPath.js";
 import { writeFile, mkDir } from "../lib/fsWrite.js";
 import {
-  branch_IndexdotYaat,
-  branch_dotyaatEmbed,
-} from "../templates/init/branch.js";
-import {
-  tree_installation,
-  tree_introduction,
-  tree_useCases,
+  mode_dotyaatembed,
+  mode_overview,
   tree_dotyaatconstruct,
-  tree_dotyaatEmbed,
-} from "../templates/init/tree.js";
+} from "../templates/init/branch.js";
 import { stdWrite } from "../lib/std.js";
 
 export default function init(args) {
@@ -35,25 +29,23 @@ export default function init(args) {
     process.chdir(path("docs")); //change the working dir to docs
 
     const COMPLETEOUTPUT = (mode) => [
-      `[done] ${mode} Build completed 🍹🍹.\n`,
+      `[done] ${mode} Build completed!.\n`,
       "green",
       false,
       true,
     ];
 
     if (mode === "tree") {
-      stdWrite(...BODY("\n" + `[!] writing (5) files to \`${cwd()}\` \n`));
-      writeFile(path("introduction.yaat"), tree_introduction(title));
-      writeFile(path("installation.yaat"), tree_installation());
-      writeFile(path("useCases.yaat"), tree_useCases());
+      stdWrite(...BODY("\n" + `[!] writing (3) files to \`${cwd()}\` \n`));
+      writeFile(path("app.yaat"), mode_overview(title));
       writeFile(path(".yaatconstruct"), tree_dotyaatconstruct());
-      writeFile(path(".yaatEmbed"), tree_dotyaatEmbed());
+      writeFile(path(".yaatEmbed"), mode_dotyaatembed(mode));
       stdWrite(...COMPLETEOUTPUT("Tree"));
     } else {
       // branch
       stdWrite(...BODY("\n" + `[!] writing (2) files to \`${cwd()}\` \n`));
-      writeFile(path("index.yaat"), branch_IndexdotYaat(title));
-      writeFile(path(".yaatEmbed"), branch_dotyaatEmbed());
+      writeFile(path("app.yaat"), mode_overview(title));
+      writeFile(path(".yaatEmbed"), mode_dotyaatembed(mode));
       stdWrite(...COMPLETEOUTPUT("Branch"));
     }
   } else {
