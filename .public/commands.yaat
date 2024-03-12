@@ -1,1 +1,105 @@
 title:: Yaat Commands
+sec:: 
+  hl:: Intro
+  text:: This guide describes all the available yaat commands, its arguments and complete usage for the current version of the yaat cli you are utilizing.
+  info:: TIPS - click the yaat tab on the footer to see the current yaat client version  
+  text:: [[ Below are the lists of yaat available commands for this specific verision ]]
+  
+  list:: yaat [args...] 
+  list:: yaat o <filepath> [args...]
+  list:: yaat init [args...]
+  list:: yaat build <filepath> 
+  list:: yaat cat
+  list:: yaat help
+  list:: yaat info 
+  list:: yaat chuser <new_user>
+
+sec:: 
+  hl:: yaat
+  text:: Build and render a yaat app. this command looks up the [[ .yaatconstruct ]] file firstly to assemble the yaatfiles together which is refered to as (( composing )), before building and rendering the application on a [[ tree-mode ]]. 
+  info:: NOTE - yaat would assume all your doc files are located in the /docs directory on your current working directory as it always try's switching to it before any operation.
+  computerCode:: commands.yaat.structure, FileSystem
+  text:: the example above is a simple structure of how your codebase should be! where root is your current working directory.
+  
+  hx:: Args 
+  list:: port- <option>
+  text:: << port- >> specifies a custom port for running your yaat application.
+
+  hx:: usage
+  computerCode:: commands.yaat.usage, Bash
+
+
+
+sec:: 
+  hl:: yaat o <filepath>
+  text:: This command works [[ almost the-same ]] way with the << yaat >> command, only that it renders the specified file [[ on a  branch-mode ]]. 
+  info:: NOTE - unlike the yaat command, this looks for the file based on the provided path when executing the command resulting to (current working directory + pathspecified).
+  
+  hx:: Args 
+  list:: port- <option>
+  text:: << port- >> specifies a custom port for running your yaat application.
+
+  hx:: usage
+  computerCode:: commands.yaato.usage, Bash
+
+
+
+sec:: 
+  hl:: yaat init
+  text:: This command initializes a new yaat application on the current working directory only if it doesnt exists.
+
+  hx:: Args 
+  list:: m- <option>
+  list:: t- <option>
+  text:: << m- >> specifies the mode of the app. option can only be << tree >> or << branch >>.
+  text:: << t- >> specifies the title of the app (( optional )), {{ cannot include whitespaces }}.
+
+  hx:: usage
+  computerCode:: commands.init.usage, Bash
+  text:: the only difference between tree-mode and branch-mode after initialization is the presence of .yaatconstruct file.
+
+
+
+sec:: 
+  hl:: yaat build <filepath> 
+  text:: This command outputs the (( tree-format )) of the specified path only if a valid yaat file, in a javascript object format. 
+
+  hx:: usage
+  computerCode:: commands.build.usage, Bash
+
+
+
+sec:: 
+  hl:: yaat cat
+  text:: This command outputs the << .yaatconstruct >> file in a javascript object format.
+  info:: This command looks for the .yaatconstruct file in the current working directory.
+
+  hx:: usage
+  computerCode:: commands.cat.usage, Bash
+
+
+
+sec:: 
+  hl:: yaat help
+  text:: Render the current documentation you are reading,  on your browser.
+
+  hx:: usage
+  computerCode:: commands.help.usage, Bash
+
+
+
+sec:: 
+  hl:: yaat info
+  text:: outputs your yaat info.
+
+  hx:: usage
+  computerCode:: commands.info.usage, Bash
+
+
+
+sec:: 
+  hl:: yaat chuser <new_user>
+  text:: changes the yaat's << current user >> to the << new_user >>. default is << yaat@no-user >>
+
+  hx:: usage
+  computerCode:: commands.chuser.usage, Bash

@@ -1,0 +1,287 @@
+commands.yaat.structure :::
+root/
+  docs/
+    app.yaat
+    .yaatconstruct
+    .yaatEmbed
+  src/
+  others/
+
+Yaat -EndEmbededBlock
+
+
+
+commands.yaat.usage :::
+$ yaat
+# runs the application on yaats default port (6500).
+
+$ yaat port- 10219
+# runs the application on port 10219.
+
+Yaat -EndEmbededBlock
+
+
+
+commands.yaato.usage :::
+$ yaat o ./docs/app.yaat
+# build and display app.yaat on yaats default port (6500) -
+# assuming you are one-directory-back from the docs directory.
+
+$ yaat o app.yaat port- 10219
+# build and display app.yaat on port 10219 -
+# assuming you are in the docs directory.
+
+Yaat -EndEmbededBlock
+
+
+
+commands.init.usage :::
+$ yaat init m- tree
+# initializes a yaat application `treemode` with the default title `Yaat Aplication`.
+
+$ yaat init m- branch t- HelloWorldApp
+# initializes a yaat application `branchmode` with title `HelloWorldApp`.
+
+Yaat -EndEmbededBlock
+
+
+
+commands.build.usage :::
+$ yaat build ./docs/app.yaat
+# assuming you are one-directory-back from the docs directory.
+
+$ yaat build app.yaat
+# assuming you are in the docs directory.
+
+Yaat -EndEmbededBlock
+
+
+
+commands.cat.usage :::
+$ yaat cat
+# assuming you are in the docs directory,  or -
+
+$ cd docs && yaat cat
+# moves to the docs directory and execute the command.
+
+Yaat -EndEmbededBlock
+
+
+
+commands.help.usage :::
+$ yaat help
+
+Yaat -EndEmbededBlock
+
+
+
+commands.info.usage :::
+$ yaat info
+
+Yaat -EndEmbededBlock
+
+
+
+commands.chuser.usage :::
+$ yaat chuser @david
+# changes the yaat current user to @david
+
+Yaat -EndEmbededBlock
+
+
+
+
+
+
+
+
+
+elements.title.usecase :::
+title:: <content>
+
+Yaat -EndEmbededBlock
+
+
+
+elements.sec.example1 :::
+title:: Hello world
+blocklevelelement
+
+sec:: 
+  blocklevelelement
+  blocklevelelement
+
+Yaat -EndEmbededBlock
+
+
+
+elements.sec.usecase :::
+title:: A perfect yaat file
+sec:: 
+  blocklevelelement
+  blocklevelelement
+sec:: 
+  blocklevelelement
+
+Yaat -EndEmbededBlock
+
+
+
+elements.heading.example1 :::
+sec:: 
+  hl:: My 
+    first    Heading inlineElement
+  otherblocklevelelements
+
+Yaat -EndEmbededBlock
+
+
+
+elements.heading.usecase :::
+sec:: 
+  hl:: My first Heading
+  otherblocklevelelements
+
+sec::
+  hl:: My second Heading
+  otherblocklevelelements
+  otherblocklevelelements
+
+Yaat -EndEmbededBlock
+
+
+
+elements.subheading.usecase :::
+sec:: 
+  hx:: My first Sub-Heading
+  otherblocklevelelements
+  hx:: My second Sub-Heading
+  otherblocklevelelements
+
+Yaat -EndEmbededBlock
+
+
+
+elements.list.usecase :::
+sec:: 
+  list:: List one
+  list:: List two
+  list:: List three
+
+sec::
+  list:: List four
+  list:: List five
+
+Yaat -EndEmbededBlock
+
+
+
+elements.info.usecase :::
+sec:: 
+  info:: This message potray's a piece of useful information that should be noted.
+
+Yaat -EndEmbededBlock
+
+
+
+elements.text.example :::
+sec:: 
+  text:: This is a <span style="color:red;"> text </span>.
+  text:: I can embed html elements eg : <a href=''>This one </a>
+  text:: I can add inline codes eg : inlineElement
+
+Yaat -EndEmbededBlock
+
+
+
+elements.text.usecase :::
+sec:: 
+  text:: This is a text.
+  text:: This is the only valid element for writing texts in your yaatapp
+
+sec:: 
+  text:: Text is always block level, its just like html p tag
+  text:: I can add inline codes eg : inlineElement
+  text:: I can embed html elements but i wont.
+
+Yaat -EndEmbededBlock
+
+
+
+elements.cc.usecase :::
+sec:: 
+  hl:: Embeding a computer code
+  computerCode:: example.one, MyYaatEmbededCode
+
+Yaat -EndEmbededBlock
+
+
+
+elements.cc.yaatembed :::
+example.one <seperator>
+ <your code here>
+<break_command>
+
+Yaat -EndEmbededBlock
+
+
+
+elements.bold.usecase :::
+sec::
+ text:: This is a [[ bold ]] text.
+
+Yaat -EndEmbededBlock
+
+
+
+elements.ewm.usecase :::
+sec::
+ text:: This is an {{ Error }} message.
+
+Yaat -EndEmbededBlock
+
+
+
+elements.inlineinfo.usecase :::
+sec::
+ text:: This is an (( Inline information )).
+
+Yaat -EndEmbededBlock
+
+
+
+elements.inlinecc.usecase :::
+sec::
+ text:: This is an << Inline Code >>.
+
+Yaat -EndEmbededBlock
+
+
+
+
+
+
+
+
+
+helpers.yc.e1 :::
+root/
+  docs/
+    app.yaat
+    commands.yaat
+    helpers.yaat
+    .yaatconstruct
+    .yaatEmbed
+  src/
+  others/
+
+Yaat -EndEmbededBlock
+
+
+helpers.yc.e2 :::
+
+Application = app.yaat
+Commands = commands.yaat
+Helpers = helpers.yaat
+
+Yaat -EndEmbededBlock

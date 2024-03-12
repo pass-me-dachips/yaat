@@ -1,1 +1,172 @@
 title:: Yaat Elements
+sec:: 
+  text:: This guide describes all the available yaat elements and usage for the current version of the yaat cli you are utilizing. 
+  text:: [[ Below are the lists of available yaat elements for this specific verision ]]
+  
+  list:: Title
+  list:: Section
+  list:: Heading
+  list:: SubHeading
+  list:: List
+  list:: Info
+  list:: Text
+  list:: Computer Code
+  list:: Bold Text
+  list:: Error or warn message
+  list:: Inline Info
+  list:: Inline Computer code
+
+  info:: block level elements always starts in a new line when rendering, while inline elements starts on the same line it was added. Yaat block level elements does not have closing tags.
+
+
+sec::
+  hl:: Title
+  text:: The document's title. this element [[ must ]] be at the top-level of the yaatfile.  
+  text:: Although the << title >> element can be used on other parts of the file as a solution for [[ larger headers ]] , {{ it is generally not recommended as it may produce weird results. }}
+  text:: The title element was created to be used only as the document title, so this rule should be maintained for predictable rendering.
+ 
+  hx:: usecase
+  computerCode:: elements.title.usecase, YAAT 
+  text:: scope - (( block ))
+
+
+sec::
+  hl:: Section
+  text:: The bakcbone of every yaatpage. the section element is a container or [[ parent element ]] that holds contents [[ children ]] . the section element itself cannot contain any other value asides block level elements as its children.
+  text:: The section element was created to serve as a container for holding block level elements, therefore it's content or children are ignored during rendering if not a valid block level element.
+  info:: Because of yaats behavior in rendering which heavily relies on the indexes for each element, nested sections cannot be created! precisely would cause wierd outputs 
+  text:: The title element is the only block level element created to stay outside a section, {{ do not write other block level elements outside a section }} eg-
+ 
+  computerCode:: elements.sec.example1, YAAT
+  text:: The above code would render so unpredicably, one common way is [[ it only renders the title ]] .
+
+  hx:: usecase
+  computerCode:: elements.sec.usecase, YAAT 
+  info:: the sec keyword on the above code is used for adding sections to your yaatfile.
+  text:: scope - (( block ))
+
+
+sec::
+  hl:: Heading
+  text:: This element is used for adding headers on your yaatapp. it does not accept any inline element, and is always rendered exactly as it is. extra whites spaces and linebreaks are trimmed off: below is an example -
+  computerCode:: elements.heading.example1, YAAT
+  text:: This above code would return << My first Heading inlineElement >> instead of << My first Heading  + theinlineElement >> . which yaat referes to as (( render as it was written ))
+  
+  hx:: usecase
+  computerCode:: elements.heading.usecase, YAAT 
+  info:: the hl keyword on the above code is used for adding headers to your yaatfile! it stands for header-l or header-large.
+  text:: scope - (( block ))
+
+
+sec::
+  hl:: Sub-Heading
+  text:: This element works exactly like the heading element, only that its used for adding sub-heading instead - (( smaller-headers )). 
+
+  hx:: usecase
+  computerCode:: elements.subheading.usecase, YAAT 
+  info:: the hx keyword on the above code is used for adding subheaders to your yaatfile! it stands for header-x or header-small.
+  text:: scope - (( block ))
+
+
+
+sec::
+  hl:: List
+  text:: This element is used for adding html ordered lists to your yaat file. 
+  text:: Just like the [[ heading ]] and [[ subheading ]] elements, this also utilizes (( render as it was written )) .
+
+  hx:: usecase
+  computerCode:: elements.list.usecase, YAAT 
+  info:: the list keyword on the above code is used for adding ordered lists to your yaatfile.
+  text:: scope - (( block ))
+
+
+
+sec::
+  hl:: Info
+  text:: This element is used for rendering texts in an outlined container, mainly used for portraying a piece of information eg -.
+  list:: writing TIPS.
+  list:: writing NB's.
+  list:: outlining a Must Read Text.
+  text:: Just like the [[ heading ]] and [[ subheading ]] elements, this also utilizes (( render as it was written )) .
+
+  hx:: usecase
+  computerCode:: elements.info.usecase, YAAT 
+  info:: the info keyword on the above code is used for outlining a piece of information on your yaatfile.
+  text:: scope - (( block ))
+
+
+sec::
+  hl:: Text
+  text:: This allows you render text on a yaatfile. unlike the rest, this element treats html contents in it as HTML and yaat contents as YAAT elements (( inline element )).
+  text:: unlike [[ heading ]],[[ subheading ]] etc, the Text element does not utilizes (( render as it was written )) formating, therefore adding a html element would render a html element! example -
+  
+  computerCode:: elements.text.example, YAAT 
+  text:: in the above example, yaat would render the html elements exactly like html would do and the inlineElement as << I can add inline codes eg : + >> (( inlineElement )).
+  text:: Its generally {{ not advicable }} to use html elements on the text element. the text element does not support (( render as it was written )) formatting so that it can efficiently render (( inline yaat elements )), therefore its the only valid yaat element that can take inline elements as its children.
+
+  hx:: usecase
+  computerCode:: elements.text.usecase, YAAT 
+  info:: the text keyword on the above code is used for writing text contents in your yaat application.
+  text:: scope - (( block )) 
+
+
+
+sec::
+  hl:: Computer Code
+  text:: This allows you embedd computer codes on your yaatpage. 
+  text:: Yaat does not allow inserting of computerCodes directly, instead you are required to embed a computer code from another file called the << .yaatEmbed >> file which helps preserves white spaces and formatting.
+
+  text:: The computer code element only takes two child content seperated by commas which are the << refrence_to_code >> and the << display_title >>. the << refrence_to_code >> child must be specified in the (( .yaatEmbed )) file, or else its content are not rendered.
+
+  hx:: usecase
+  computerCode:: elements.cc.usecase, app.yaat 
+  computerCode:: elements.cc.yaatembed, .yaatEmbed 
+  text:: Replace seperator with the yaat embed's seperator tag which is << ::: >> and break_command with yaat embed's break command which is << Yaat -EndEmbededBlock >>
+
+  info:: the computerCode keyword on the above code is used for embeding computercodes from your .yaatembed file to yaat.
+  text:: scope - (( block ))
+
+
+
+sec::
+  hl:: Bold Text
+  text:: This inline element is used for making bold texts on the << Text >> element. 
+
+  hx:: usecase
+  computerCode:: elements.bold.usecase, YAAT 
+  info:: The double left square brackets + a whitespace stands as the opening tag, while a whitespace + double right square brackets stands as the closing tag! the content in between becomes bold when rendered.
+  text:: scope - (( inline ))
+
+
+
+sec::
+  hl:: Error or warn message
+  text:: This inline element is used to tag a sentence or word as depreated, warning or error related.
+
+  hx:: usecase
+  computerCode:: elements.ewm.usecase, YAAT 
+  info:: The double left curly brackets + a whitespace stands as the opening tag, while the whitespace + a double right curly brackets stands as the closing tag! the content in between becomes tagged when rendered.
+  text:: scope - (( inline ))
+
+
+
+sec::
+  hl:: Inline Info
+  text:: An inline version of the << info >> element.
+
+  hx:: usecase
+  computerCode:: elements.inlineinfo.usecase, YAAT 
+  info:: The double left brackets + a whitespace stands as the opening tag, while the whitespace + a double right brackets stands as the closing tag! the content in between becomes tagged when rendered.
+  text:: scope - (( inline ))
+
+
+
+sec::
+  hl:: Inline Computer code
+  text:: An inline version of the << computerCode >> element.
+  text:: The content of this element is not embeded from a << .yaatEmbed >> file but specified on the element.
+
+  hx:: usecase
+  computerCode:: elements.inlinecc.usecase, YAAT 
+  info:: The double less than sign + a whitespace stands as the opening tag, while the whitespace + a double greater than sign stands as the closing tag! the content in between becomes an inline code when rendered.
+  text:: scope - (( inline ))

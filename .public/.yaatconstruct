@@ -1,6 +1,6 @@
 
 Overview = overview.yaat
 Commands = commands.yaat
-Configs = configs.yaat
+Helpers = helpers.yaat
 Elements = elements.yaat
-Notes = notes.yaat
+Bonus = bonus.yaat
