@@ -10,7 +10,6 @@ root/
 Yaat -EndEmbededBlock
 
 
-
 commands.yaat.usage :::
 $ yaat
 # runs the application on yaats default port (6500).
@@ -283,5 +282,23 @@ helpers.yc.e2 :::
 Application = app.yaat
 Commands = commands.yaat
 Helpers = helpers.yaat
+
+Yaat -EndEmbededBlock
+
+
+helpers.ye.e1:::
+codeA $SEPERATOR
+console.log("Hello, World!");
+$BREAK_COMMAND
+
+codeB $SEPERATOR
+package main
+
+import "fmt"
+
+func main() {
+fmt.Println("Hello, World!")
+}
+$BREAK_COMMAND
 
 Yaat -EndEmbededBlock

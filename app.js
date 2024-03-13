@@ -1,4 +1,7 @@
 #!/usr/bin/env node
+// TODO: download consolas font, so same fonts are used accros devices.
+// TODO: remove unused font family
+// TODO: change ---> app running design to something meaningful
 
 // Yaat! Another Annotation Technology.
 import { stdWrite } from "./src/lib/std.js";
