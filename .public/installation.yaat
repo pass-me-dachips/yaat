@@ -1,0 +1,15 @@
+title:: Installation
+
+sec:: 
+ text:: This guide provides steps on how to install (( yaat )) on your machine for both production and developement.
+
+sec::
+  hx:: Recommended for developers
+  computerCode:: installation.1, Shell
+  text:: This commands installs yaat globally on your machine and changes yaat current user to << the username specified in the second command >>. If the second command runs without any errors and does not output anything after the command execution, it means you have succesfully installed yaat.
+
+sec::
+  hx:: Recommended for hosting
+  computerCode:: installation.2, Shell
+  text:: This commands installs yaat on the current folder and changes yaat current user to << the username specified in the second command >> [[ recommended: use your organization's name ]]. If the second command runs without any errors and does not output anything after the command execution, it means you have succesfully installed yaat.
+

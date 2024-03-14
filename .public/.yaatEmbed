@@ -331,3 +331,26 @@ sec::
   list:: two
   
 Yaat -EndEmbededBlock
+
+
+installation.1 :::
+$ npm install -g yaat
+#installs yaat globally.
+
+$ yaat chuser <username>
+# changes the default yaat user.
+
+Yaat -EndEmbededBlock
+
+
+
+installation.2 :::
+$ npm install yaat
+# installs yaat.
+# NOTE - removed the -g flag
+
+$ yaat chuser <username>
+# changes the default yaat user from yaat.
+
+Yaat -EndEmbededBlock
+

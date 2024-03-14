@@ -103,4 +103,3 @@ sec::
 
   hx:: usage
   computerCode:: commands.chuser.usage, Shell
-  text:: This command is currently {{ Unstable }}
