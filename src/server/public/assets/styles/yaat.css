@@ -56,7 +56,7 @@
 
 .inlinecode {
   background-color: var(--scrollbar-color);
-  font-family: Consolas, monospace;
+  font-family: consolas, monospace;
   color: var(--content-txt-color);
 }
 
@@ -107,7 +107,7 @@
   color: white; 
 }
 .computerCode-computerCode {
-  font-family: Consolas, monospace;
+  font-family: consolas, monospace;
   color: var(--content-COMPUTERCODE-color);
   line-height: 1.7;
   overflow: auto;

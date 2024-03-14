@@ -1,6 +1,4 @@
 #!/usr/bin/env node
-// TODO: download consolas font, so same fonts are used accros devices.
-// TODO: remove unused font family
 // TODO: change ---> app running design to something meaningful
 // TODO: add a better scrollbar for computer code
 // TODO: add the popup when docs tab is clicked 
