@@ -5,15 +5,8 @@ import { stdWrite } from "../lib/std.js";
 import execBrowser from "../lib/execBrowser.js";
 import getFileContents from "../apis/getFileContents.js";
 import publicGETFC from "../apis/publicGetFC.js";
+import { readFile } from "../lib/fsRead.js";
 
-// process.on("uncaughtException", (err) => {
-//   if (err.message.includes("address already in use")) {
-//     console.log("PORT ERROR");
-//   } else {
-//     console.log(err.message);
-//     process.exit(1);
-//   }
-// });
 
 const server = express();
 const cb = (port) => {
@@ -26,7 +19,9 @@ const cb = (port) => {
 
   if (openBrowser === true) {
     // executed successfully
-    stdWrite(`---> App running`, "green", true, true);
+    const yaatUser = readFile(".user").trim();
+    
+    stdWrite(`${yaatUser}@${port}~ +++++`, "green", true, true);
   } else {
     // unsupported platform
     stdWrite(`Unsupported platform!`, "red");
