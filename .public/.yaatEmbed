@@ -302,3 +302,32 @@ fmt.Println("Hello, World!")
 $BREAK_COMMAND
 
 Yaat -EndEmbededBlock
+
+
+bonus.e1 :::
+npm install -g yaat
+Yaat -EndEmbededBlock
+
+
+bonus.e2 :::
+yaat init m- tree t- bonus
+Yaat -EndEmbededBlock
+
+
+bonus.e3:::
+title:: Yaat Application
+
+sec::
+  hl:: Header one
+  text:: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore dicta odio ducimus accusamus sit deserunt odit quod nisi, ut neque vel, commodi qui tempora similique molestiae quos exercitationem, facilis et?
+  info:: This is an information.
+
+sec:: 
+  hl:: Header two
+  text:: This is another text.
+
+  hx:: Lists
+  list:: one
+  list:: two
+  
+Yaat -EndEmbededBlock

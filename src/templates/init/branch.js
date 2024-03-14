@@ -2,7 +2,7 @@ export const mode_overview = (title) => `
 title:: ${title}
 sec::
  text:: A simple yaat application.
- computerCode::  sample, Bash
+ computerCode::  sample, Shell
 `;
 
 export const mode_dotyaatembed = (mode) => `

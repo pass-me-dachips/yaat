@@ -26,7 +26,7 @@ sec::
   text:: << port- >> specifies a custom port for running your yaat application.
 
   hx:: usage
-  computerCode:: commands.yaat.usage, Bash
+  computerCode:: commands.yaat.usage, Shell
 
 
 
@@ -40,7 +40,7 @@ sec::
   text:: << port- >> specifies a custom port for running your yaat application.
 
   hx:: usage
-  computerCode:: commands.yaato.usage, Bash
+  computerCode:: commands.yaato.usage, Shell
 
 
 
@@ -55,7 +55,7 @@ sec::
   text:: << t- >> specifies the title of the app (( optional )), {{ cannot include whitespaces }}.
 
   hx:: usage
-  computerCode:: commands.init.usage, Bash
+  computerCode:: commands.init.usage, Shell
   text:: the only difference between tree-mode and branch-mode after initialization is the presence of .yaatconstruct file.
 
 
@@ -65,7 +65,7 @@ sec::
   text:: This command outputs the (( tree-format )) of the specified path only if a valid yaat file, in a javascript object format. 
 
   hx:: usage
-  computerCode:: commands.build.usage, Bash
+  computerCode:: commands.build.usage, Shell
 
 
 
@@ -75,7 +75,7 @@ sec::
   info:: This command looks for the .yaatconstruct file in the current working directory.
 
   hx:: usage
-  computerCode:: commands.cat.usage, Bash
+  computerCode:: commands.cat.usage, Shell
 
 
 
@@ -84,7 +84,7 @@ sec::
   text:: Render the current documentation you are reading,  on your browser.
 
   hx:: usage
-  computerCode:: commands.help.usage, Bash
+  computerCode:: commands.help.usage, Shell
 
 
 
@@ -93,7 +93,7 @@ sec::
   text:: outputs your yaat info.
 
   hx:: usage
-  computerCode:: commands.info.usage, Bash
+  computerCode:: commands.info.usage, Shell
 
 
 
@@ -102,4 +102,5 @@ sec::
   text:: changes the yaat's << current user >> to the << new_user >>. default is << yaat@no-user >>
 
   hx:: usage
-  computerCode:: commands.chuser.usage, Bash
+  computerCode:: commands.chuser.usage, Shell
+  text:: This command is currently {{ Unstable }}
