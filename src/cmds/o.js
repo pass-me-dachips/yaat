@@ -21,7 +21,7 @@ function customBasePath(path) {
 export default function o(options) {
   const path = options[0];
   if (path) {
-    stdWrite("Yaat! another anotation tool \n");
+    stdWrite("Yeah! another anotation tool \n");
 
     const formatedPath = basePath(cwd(), path);
 

@@ -10,7 +10,7 @@ import construct from "../interpreter/configs/construct.js";
 const HEAD = (m, col) => [m, col ?? "green", true, false];
 
 export default function help(root) {
-  stdWrite("Yaat! another anotation tool \n");
+  stdWrite("Yeah! another anotation tool \n");
 
   const formatedPath = formatPath(root, ".public");
   // format path to .public

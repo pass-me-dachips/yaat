@@ -1,14 +1,14 @@
 {
   "name": "yaat",
   "version": "1.1.0",
-  "description": "Yaat! Another Annotation Technology",
+  "description": "Yeah! Another Annotation Technology",
   "main": "app.js",
   "type": "module",
   "bin": {
     "yaat": "./app.js"
   },
   "scripts": {
-    "shout": "echo Yaat! Another Annotation Technology.",
+    "shout": "echo Yeah! Another Annotation Technology.",
     "start": "node .",
     "startServer": "nodemon ."
   },

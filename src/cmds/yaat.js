@@ -13,7 +13,7 @@ const HEAD = (m, col) => [m, col ?? "green", true, false];
 const BODY = (m, col) => [m, col ?? "blue", false, false];
 
 export default function yaat(port) {
-  stdWrite("Yaat! another anotation tool \n");
+  stdWrite("Yeah! another anotation tool \n");
 
   const docPathExists = fsExists(formatPath(cwd(), "docs"));
 

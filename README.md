@@ -1,3 +1,3 @@
 # Yaat
 
-Yaat! another anotation tool
+another anotation tool

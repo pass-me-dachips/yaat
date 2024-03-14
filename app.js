@@ -5,7 +5,7 @@
 // TODO: add a better scrollbar for computer code
 // TODO: add the popup when docs tab is clicked 
 
-// Yaat! Another Annotation Technology.
+// Yeah! Another Annotation Technology.
 import { stdWrite } from "./src/lib/std.js";
 import { argv } from "node:process";
 import yaat from "./src/cmds/yaat.js";
