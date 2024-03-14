@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 // TODO: change ---> app running design to something meaningful
-// TODO: add a better scrollbar for computer code
 // TODO: add the popup when docs tab is clicked 
 // TODO: add hosting field to docs
 

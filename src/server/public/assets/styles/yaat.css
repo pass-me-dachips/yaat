@@ -113,6 +113,14 @@
   overflow: auto;
   font-size: 15px;
 }
+.computerCode-computerCode::-webkit-scrollbar {
+  width: 0.2em;
+  background-color: var(--scrollbar-color);
+}
+.computerCode-computerCode::-webkit-scrollbar-thumb {
+  background-color: var(--light);
+  border-radius: 10px;
+}
 
 
 @media (min-width: 760px) {
