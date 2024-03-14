@@ -2,7 +2,8 @@ title:: Bonus
 
 sec::
  hl:: Notes
- info:: Yaat utilizes a Unix-based file format for path arguments in commands, for example  :  /dir/filename or ./dir/filename
+ info:: Yaat utilizes a Unix-based file format for path arguments in commands, for example  :  /dir/filename or ./dir/filename.
+ info:: Yaat block level elements does not uses closing tags.
  info:: The paths to your yaat files on the .yaatconstruct file must be relative to the current location which is usually /docs.
  info:: All yaat files including .yaatconstruct and .yaatEmbed must be on the same directory, usually /docs.
  info:: When calling the `yaat` command, always be on the root directory or one directory back from the docs directory cause yaat would look for the docs folder on the current working directory the command was called.
