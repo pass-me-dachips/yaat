@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// TODO: add the popup when docs tab is clicked 
+
 // TODO: add hosting field to docs
 
 // Yeah! Another Annotation Technology.

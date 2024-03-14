@@ -1,4 +1,4 @@
-//
+// 
 
 const showTab = (id) => {
   const rootElem = document.getElementById(id);
@@ -45,7 +45,7 @@ const footerIcons = `
    <div class="f-t-c-t">Uptime</div>
   </div>
 
-  <div class="f-t-c" onclick="window.location.href='https://docs/'">
+  <div class="f-t-c" onclick="window.location.href='https://yaat.onrender.com'">
    ${docsIcon}
    <div class="f-t-c-t">Docs</div>
   </div>
