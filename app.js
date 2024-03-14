@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-// TODO: add hosting field to docs
-
 // Yeah! Another Annotation Technology.
 import { stdWrite } from "./src/lib/std.js";
 import { argv } from "node:process";
