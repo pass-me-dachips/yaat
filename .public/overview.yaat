@@ -15,9 +15,6 @@ sec::
 sec:: 
   hl:: Elevating Documentation Standards
   text:: With YAAT at your disposal, you can elevate the standards of your application's documentation. The intuitive interface, coupled with the powerful markup language, enables you to create detailed and informative guides that cater to diverse audiences. Whether you're documenting code snippets, API references, or user guides, YAAT provides the tools you need to deliver exceptional documentation.
-sec::
-  hl:: WHY?
-  text:: With yaat, you dont have to bother creating an extra website for your documentation especially for those who has lesser time to spend eg: [[ I myslef ]], IMO i'd say prolly : [[ the creators of the c++ documentation ]], [[ the creators of the arch os documentation ]], [[ the creators of the git docs ]] and other creators who created a powferful software with a horrible looking docs lol sorry! etc.
 
 sec::
   hl:: Conclusion
