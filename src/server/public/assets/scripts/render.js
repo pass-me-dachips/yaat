@@ -1,7 +1,5 @@
-//
 
-const port = window.location.href.split("http://localhost:")[1].split("/")[0];
-const url = `http://localhost:${port}`;
+const url = window.location.href.split("/")[0];
 
 (async () => {
   try {
@@ -12,13 +10,15 @@ const url = `http://localhost:${port}`;
       },
     });
     const tree = await response.json();
-    RestBody(tree, port);
+    document.title = tree.files[0]
+    RestBody(tree);
   } catch (error) {
     console.log(error.message);
   }
 })();
 
 async function updateRoot(base, asDocs) {
+  document.title = base
   const urlpath = asDocs === "Yes" ? "docs" : "tree";
   try {
     const response = await fetch(url + `/apis/${urlpath}/${base}`, {
@@ -52,7 +52,7 @@ const toogleNavigationbar = () => {
   navigationMenu.classList.toggle("hide-tree-tab");
 };
 
-function RestBody(tree, port) {
+function RestBody(tree) {
   async function copyToClipboard(text) {
     try {
       await navigator.clipboard.writeText(text);
