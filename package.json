@@ -1,11 +1,11 @@
 {
-  "name": "yaat",
+  "name": "pkg-yaat",
   "version": "1.1.0",
   "description": "Yeah! Another Annotation Technology",
   "main": "app.js",
   "type": "module",
   "bin": {
-    "yaat": "./app.js"
+    "yaat": "app.js"
   },
   "scripts": {
     "shout": "echo Yeah! Another Annotation Technology.",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/infodavid00/yaat.git"
+    "url": "git+https://github.com/pass-me-dachips/yaat.git"
   },
   "keywords": [
     "yaat",
@@ -26,9 +26,9 @@
   "author": "yaat",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/infodavid00/yaat/issues"
+    "url": "https://github.com/pass-me-dachips/yaat/issues"
   },
-  "homepage": "https://github.com/infodavid00/yaat#readme",
+  "homepage": "https://github.com/pass-me-dachips/yaat#readme",
   "dependencies": {
     "chalk": "^5.3.0",
     "express": "^4.18.2"
