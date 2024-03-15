@@ -305,7 +305,7 @@ Yaat -EndEmbededBlock
 
 
 bonus.e1 :::
-npm install -g yaat
+npm install -g pkg-yaat
 Yaat -EndEmbededBlock
 
 
@@ -334,7 +334,7 @@ Yaat -EndEmbededBlock
 
 
 installation.1 :::
-$ npm install -g yaat
+$ npm install -g pkg-yaat
 #installs yaat globally.
 
 $ yaat chuser <username>
@@ -345,7 +345,7 @@ Yaat -EndEmbededBlock
 
 
 installation.2 :::
-$ npm install yaat
+$ npm install pkg-yaat
 # installs yaat.
 # NOTE - removed the -g flag
 
