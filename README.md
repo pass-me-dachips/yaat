@@ -16,9 +16,9 @@ By utilizing YAAT, you can enhance the accessibility and user experience of your
 
 With YAAT at your disposal, you can elevate the standards of your application's documentation. The intuitive interface, coupled with the powerful markup language, enables you to create detailed and informative guides that cater to diverse audiences. Whether you're documenting code snippets, API references, or user guides, YAAT provides the tools you need to deliver exceptional documentation.
 
+## onclusion
 
-hl:: Conclusion
-text:: In conclusion, YAAT is not just an annotation tool; it's a game-changer in the realm of documentation creation. By harnessing its capabilities to convert markup language into HTML and render it seamlessly across devices, you can take your application's documentation to new heights. Embrace YAAT today and unlock a world of possibilities for creating engaging, informative, and visually stunning documentations.
+conclusion, YAAT is not just an annotation tool; it's a game-changer in the realm of documentation creation. By harnessing its capabilities to convert markup language into HTML and render it seamlessly across devices, you can take your application's documentation to new heights. Embrace YAAT today and unlock a world of possibilities for creating engaging, informative, and visually stunning documentations.
 
 ## Docs
 
