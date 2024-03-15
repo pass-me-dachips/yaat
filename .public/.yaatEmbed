@@ -345,9 +345,8 @@ Yaat -EndEmbededBlock
 
 
 installation.2 :::
-$ npm install pkg-yaat
-# installs yaat.
-# NOTE - removed the -g flag
+$ npm i -g pkg-yaat
+# installs yaat globally.
 
 $ yaat chuser <username>
 # changes the default yaat user from yaat.

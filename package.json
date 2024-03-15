@@ -5,7 +5,7 @@
   "main": "app.js",
   "type": "module",
   "bin": {
-    "yaat": "app.js"
+    "yaat": "./app.js"
   },
   "scripts": {
     "shout": "echo Yeah! Another Annotation Technology.",
