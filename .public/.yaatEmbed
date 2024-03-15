@@ -344,12 +344,32 @@ Yaat -EndEmbededBlock
 
 
 
-installation.2 :::
-$ npm i -D pkg-yaat
-# installs yaat as a dev dependency.
 
-$ yaat chuser <username>
-# changes the default yaat user from yaat.
+hosting.1 :::
+$ yaat init m- tree t- Deploying.Yaat.Application
+
+Yaat -EndEmbededBlock
+
+
+hosting.2 :::
+$ npm install pkg-yaat
+#installs yaat.
+
+$ ./node_modules/.bin/yaat chuser <username>
+# changes the default yaat user.
+
+Yaat -EndEmbededBlock
+
+
+hosting.3 :::
+
+Name = <Nameofproject>
+Region = <chooseanyregion>
+Branch = <chooseyourdefaultbranch>
+Root Directory = .
+Runtime = Node
+Build Command = npm install
+Start Command = ./node_modules/.bin/yaat 
 
 Yaat -EndEmbededBlock
 

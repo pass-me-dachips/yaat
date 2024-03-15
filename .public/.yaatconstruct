@@ -5,4 +5,5 @@ Requirements = requirements.yaat
 Commands = commands.yaat
 Helpers = helpers.yaat
 Elements = elements.yaat
+Hosting = hosting.yaat
 Bonus = bonus.yaat
