@@ -16,10 +16,6 @@ By utilizing YAAT, you can enhance the accessibility and user experience of your
 
 With YAAT at your disposal, you can elevate the standards of your application's documentation. The intuitive interface, coupled with the powerful markup language, enables you to create detailed and informative guides that cater to diverse audiences. Whether you're documenting code snippets, API references, or user guides, YAAT provides the tools you need to deliver exceptional documentation.
 
-## Conclusion
-
-YAAT is not just an annotation tool; it's a game-changer in the realm of documentation creation. By harnessing its capabilities to convert markup language into HTML and render it seamlessly across devices, you can take your application's documentation to new heights. Embrace YAAT today and unlock a world of possibilities for creating engaging, informative, and visually stunning documentations.
-
 ## Installation
 
 ```bash
@@ -30,14 +26,22 @@ $ yaat chuser <username>
 # changes the default yaat user.
 ```
 
-This commands installs yaat globally on your machine and changes yaat current user to ** the username specified in the second command **. If the second command runs without any errors and does not output anything after the command execution, it means you have succesfully installed yaat.
+This commands installs yaat globally on your machine and changes yaat current user to _the username specified in the second command_. If the second command runs without any errors and does not output anything after the command execution, it means you have succesfully installed yaat.
 
 ## Docs
 
-To view the yaat up-to-date documenation, you an visit the following url 👉 [yaatdocs](https://yaat.onrender.com).
+View docs for all yaat versions 👇
 
-you can also view the same content locally as long as you have yaat installed, using 👇
+- v1.1.0 <current> - <recommended> [view docs](https://yaat-v1.onrender.com)
+
+To view the yaat **CURRENT** docs for your specific version, run 👇
 
 ```bash
 $ yaat help
 ```
+
+this should display the docs on your default web browser **YOU MUST HAVE YAAT INSTALLED TO USE THIS COMMAD**
+
+## Conclusion
+
+YAAT is not just an annotation tool; it's a game-changer in the realm of documentation creation. By harnessing its capabilities to convert markup language into HTML and render it seamlessly across devices, you can take your application's documentation to new heights. Embrace YAAT today and unlock a world of possibilities for creating engaging, informative, and visually stunning documentations.
