@@ -32,7 +32,7 @@ This commands installs yaat globally on your machine and changes yaat current us
 
 View docs for all yaat versions 👇
 
-- v1.1.0 `current` (`recommended`) [view docs](https://yaat-v1.onrender.com)
+- v1.1.0 `current` (`recommended`) [view docs](https://yaat-1-1-0.onrender.com)
 
 To view the yaat **CURRENT** docs for your specific version, run 👇
 
