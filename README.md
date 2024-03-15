@@ -22,7 +22,7 @@ YAAT is not just an annotation tool; it's a game-changer in the realm of documen
 
 ## Installation
 
-```
+```bash
 $ npm install -g yaat
 #installs yaat globally.
 
@@ -30,14 +30,14 @@ $ yaat chuser <username>
 # changes the default yaat user.
 ```
 
-This commands installs yaat globally on your machine and changes yaat current user to << the username specified in the second command >>. If the second command runs without any errors and does not output anything after the command execution, it means you have succesfully installed yaat.
+This commands installs yaat globally on your machine and changes yaat current user to ** the username specified in the second command **. If the second command runs without any errors and does not output anything after the command execution, it means you have succesfully installed yaat.
 
 ## Docs
 
-To view the yaat complete documenation, you an visit the following : [yaatdocs](https://yaat.onrender.com).
+To view the yaat up-to-date documenation, you an visit the following url 👉 [yaatdocs](https://yaat.onrender.com).
 
-you can also view the yaat complete documentation locally as long as you have yaat installed using :
+you can also view the same content locally as long as you have yaat installed, using 👇
 
-```
+```bash
 $ yaat help
 ```
