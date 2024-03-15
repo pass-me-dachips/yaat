@@ -40,7 +40,7 @@ To view the yaat **CURRENT** docs for your specific version, run 👇
 $ yaat help
 ```
 
-this should display the docs on your default web browser. **YOU MUST HAVE YAAT INSTALLED TO USE THIS COMMAD**
+this should display the docs on your default web browser. **YOU MUST HAVE YAAT INSTALLED TO USE THIS COMMAND**
 
 ## Conclusion
 
