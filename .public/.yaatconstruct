@@ -1,6 +1,7 @@
 
 Overview = overview.yaat
 Installtaion = installation.yaat
+Requirements = requirements.yaat
 Commands = commands.yaat
 Helpers = helpers.yaat
 Elements = elements.yaat
