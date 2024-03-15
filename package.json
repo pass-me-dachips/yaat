@@ -12,6 +12,9 @@
     "start": "node .",
     "startServer": "nodemon ."
   },
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pass-me-dachips/yaat.git"
