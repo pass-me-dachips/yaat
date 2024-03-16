@@ -1,7 +1,7 @@
 title:: Hosting
 
 sec::   
- text:: If you plan on making your yaat application for publicly accessible, This guide would give you a detailed step by step guide on how to complete your task.
+ text:: If you plan on making your yaat application publicly accessible, This guide would walk you through.
  text:: Yaat uses <a href='https://render.com'>render.com</a> for hosting documentations as it provides easy setup and scaling, so this guide would mainly focus on [[ hosting using render ]].
  info:: Yaat recommends utilizing render for hosting.
 
@@ -15,14 +15,14 @@ sec::
  text:: Now that you have installed yaat and ensure its working, run the following command to initialize a yaat application
  computerCode:: hosting.1, Shell
  text:: After initializing your yaat application, you can edit its contents and add new files etc.
- info:: Be sure to run your application locally after every changes to ensure its looking exactly as you want. Remember that your hosted application would look and operate exactly like your local application.
+ info:: Be sure to run your application locally after every changes to ensure its looking exactly as you want. Remember that your hosted application would look and operate exactly as your local application.
  
 sec::
  hx:: Hosting Your yaat application
- text:: Before hosting your yaat application, it is generally compulsory to install yaat as a dependecy on your project.
+ text:: Before hosting your yaat application, it is compulsory to install yaat as a dependecy on your project.
  computerCode:: hosting.2, Shell
  text:: The above commands installs yaat as a dependecy, and changes its default user to << the username specified in the second command >>.
 
- text:: Now create a new web service on <a href='https://render.com'>render.com</a> and add the following content to the fields respectfully :
+ text:: Now create a new web service on <a href='https://dashboard.render.com/create?type=web'>render.com</a> and add the following content to the fields respectfully :
  computerCode:: hosting.3, RENDER OPTIONS 
  text:: After this, you can start deploying. Thats it, you can now acces your yaat application anywhere around the world once deployed coompletely.
