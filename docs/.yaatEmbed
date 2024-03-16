@@ -168,15 +168,13 @@ Yaat -EndEmbededBlock
 
 
 helpers.yc.e1 :::
-root/
+yaat/
   docs/
     app.yaat
     commands.yaat
     helpers.yaat
     .yaatconstruct
     .yaatEmbed
-  src/
-  others/
 
 Yaat -EndEmbededBlock
 
