@@ -14,9 +14,9 @@ export default function info() {
   const HEAD = (header) => [header, "green", false, false];
   const BODY = (value) => [value, "white", true];
 
-  stdWrite(...HEAD("[Client-version] "));
+  stdWrite(...HEAD("[CLIENT_VERSION] "));
   stdWrite(...BODY(clientVersion));
-  stdWrite(...HEAD("[Server-version] "));
+  stdWrite(...HEAD("[SERVER_VERSION] "));
   stdWrite(...BODY(serverVersion));
   stdWrite(...HEAD("[Root-user] "));
   stdWrite(...BODY(rootUser));

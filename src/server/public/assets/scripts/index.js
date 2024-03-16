@@ -45,7 +45,7 @@ const footerIcons = `
    <div class="f-t-c-t">Uptime</div>
   </div>
 
-  <div class="f-t-c" onclick="window.location.href='https://yaat.onrender.com'">
+  <div class="f-t-c" onclick="window.location.href='https://yaat-1-1-0.onrender.com'">
    ${docsIcon}
    <div class="f-t-c-t">Docs</div>
   </div>
