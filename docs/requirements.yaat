@@ -1,5 +1,5 @@
 title:: Requirements
 
 sec::
- info:: you must have node 18 and above running on your machine to use yaat version 1.1.0
+ info:: you must have node 18 and above, npm and git running on your machine to use yaat version 1.1.0
  
