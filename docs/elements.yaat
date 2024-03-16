@@ -102,7 +102,7 @@ sec::
   
   computerCode:: elements.text.example, YAAT 
   text:: in the above example, yaat would render the html elements exactly like html would do and the inlineElement as << I can add inline codes eg : + >> (( inlineElement )).
-  text:: Its generally {{ not advicable }} to use html elements on the text element. the text element does not support (( render as it was written )) formatting so that it can efficiently render (( inline yaat elements )), therefore its the only valid yaat element that can take inline elements as its children.
+  text:: Its generally {{ not advisable }} to use html elements on the text element. the text element does not support (( render as it was written )) formatting so that it can efficiently render (( inline yaat elements )), therefore its the only valid yaat element that can take inline elements as its children.
 
   hx:: usecase
   computerCode:: elements.text.usecase, YAAT 
