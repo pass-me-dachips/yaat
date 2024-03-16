@@ -21,12 +21,10 @@ With YAAT at your disposal, you can elevate the standards of your application's 
 ```bash
 $ npm i -g new-yaat
 #installs yaat globally.
-
-$ yaat chuser <username>
-# changes the default yaat user.
 ```
 
-This commands installs yaat globally on your machine and changes yaat current user to _the username specified in the second command_. If the second command runs without any errors and does not output anything after the command execution, it means you have succesfully installed yaat.
+This commands installs yaat globally on your machine.
+run `yaat info` to ensure yaat was installed successfully.
 
 ## Docs
 
