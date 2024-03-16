@@ -23,4 +23,4 @@ sec::
 
  text:: Now create a new web service on <a href='https://dashboard.render.com/create?type=web'>render.com</a> with the code for your yaat application and add the following content to the fields respectively:
  computerCode:: hosting.1, RENDER OPTIONS 
- text:: After this, you can start deploying. Thats it, you can now acces your yaat application anywhere around the world once deployed coompletely.
+ text:: After this, you can start deploying. Thats it, you can now acces your yaat application anywhere around the world once deployed completely.
