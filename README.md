@@ -2,7 +2,7 @@
 
 ## Overview
 
-YAAT, short for Yeah! Another Annotation Tool, is an annotation tool designed to revolutionize the way we create documentations for our softwares. With its own in-built markup language, YAAT empowers users to effortlessly generate documentation that is both comprehensive and visually appealing.
+YAAT, short for Yaat! Another Annotation Tool, is an annotation tool designed to revolutionize the way we create documentations for our softwares. With its own in-built markup language, YAAT empowers users to effortlessly generate documentation that is both comprehensive and visually appealing.
 
 ## Seamless Conversion and Rendering
 

@@ -1,6 +1,6 @@
 import { join } from "node:path";
 
-export default function basePath(cwd, parsedPath) {
+export default function argsParser(cwd, parsedPath) {
   if (parsedPath.startsWith("/")) parsedPath = parsedPath.slice(1);
   if (parsedPath.startsWith("./")) parsedPath = parsedPath.slice(2);
 

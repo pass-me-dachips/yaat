@@ -1,16 +1,13 @@
 {
   "name": "new-yaat",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Yeah! Another Annotation Technology",
   "main": "app.js",
   "type": "module",
-  "bin": {
-    "yaat": "./app.js"
-  },
   "scripts": {
     "shout": "echo Yeah! Another Annotation Technology.",
     "start": "node .",
-    "startServer": "nodemon ."
+    "help": "node . help"
   },
   "engines": {
     "node": ">=18.0.0"
