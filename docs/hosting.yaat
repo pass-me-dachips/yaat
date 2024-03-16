@@ -8,7 +8,7 @@ sec::
 sec::
  hx:: Installing yaat globally
  computerCode:: installation.1, Shell
- text:: The above command installs yaat globally and changes the default yaat user.
+ text:: The above command installs yaat globally.
 
 sec::
  hx:: Adding your Yaat Contents
@@ -21,8 +21,8 @@ sec::
  hx:: Hosting Your yaat application
  text:: Before hosting your yaat application, it is compulsory to install yaat as a dependecy on your project.
  computerCode:: hosting.2, Shell
- text:: The above commands installs yaat as a dependecy, and changes its default user to << the username specified in the second command >>.
+ text:: The above commands installs yaat as a dependecy.
 
- text:: Now create a new web service on <a href='https://dashboard.render.com/create?type=web'>render.com</a> and add the following content to the fields respectfully :
+ text:: Now create a new web service on <a href='https://dashboard.render.com/create?type=web'>render.com</a> and add the following content to the fields respectively:
  computerCode:: hosting.3, RENDER OPTIONS 
  text:: After this, you can start deploying. Thats it, you can now acces your yaat application anywhere around the world once deployed coompletely.

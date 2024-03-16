@@ -354,8 +354,8 @@ hosting.2 :::
 $ npm install new-yaat
 #installs yaat.
 
-$ ./node_modules/.bin/yaat chuser <username>
-# changes the default yaat user.
+$ ./node_modules/.bin/yaat info
+# confirm yaat was installed.
 
 Yaat -EndEmbededBlock
 
