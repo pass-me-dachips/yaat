@@ -10,7 +10,6 @@ import build from "./src/cmds/build.js";
 import cat from "./src/cmds/cat.js";
 import help from "./src/cmds/help.js";
 import info from "./src/cmds/info.js";
-import chuser from "./src/cmds/chuser.js";
 
 process.on("uncaughtException", (error) => {
   const options = ["\n\n" + error.message, "red", true, false];
@@ -40,7 +39,7 @@ if (yaatPortion.length === 0 || yaatPortion[0] === "port-") {
       cat();
       break;
     case "help":
-      help(cmds[1]);
+      help();
       break;
     case "info":
       info();

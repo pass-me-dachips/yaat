@@ -17,11 +17,10 @@ const url = window.location.href.split("/")[0];
   }
 })();
 
-async function updateRoot(base, asDocs) {
+async function updateRoot(base) {
   document.title = base
-  const urlpath = asDocs === "Yes" ? "docs" : "tree";
   try {
-    const response = await fetch(url + `/apis/${urlpath}/${base}`, {
+    const response = await fetch(url + `/apis/tree/${base}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -99,9 +98,7 @@ function RestBody(tree) {
         ? "tree-tab-box-t tree-tab-box-t-active"
         : "tree-tab-box-t";
 
-      return `<button class="${className}" id="${data}" onclick="updateRoot('${data}', '${
-        tree?.asDocs ? "Yes" : "No"
-      }'), removeTabsActiveClases('${data}', '${
+      return `<button class="${className}" id="${data}" onclick="updateRoot('${data}'), removeTabsActiveClases('${data}', '${
         tree.files
       }')">${data}</button>`;
     };
