@@ -1,0 +1,44 @@
+title:: Yaat Helpers
+
+sec::
+  text:: This guide describes all yaat's helper files, and its complete usage for the current version of the yaat cli you are utilizing.
+  text:: [[ Below are the lists of yaat available helper files for this specific verision ]]
+  
+  list:: Yaat construct
+  list:: Yaat embed
+
+sec::
+  hl:: Yaat Construct
+  text:: The (( yaat construct )) is a helper file which consists of multiple << key = value >> fields where : << key >> is the title of the file to be shown on the side nav, and << value >> is a path to where the file content resides. 
+  info:: Any yaat application without the yaat construct file cannot be built and viewed on a tree mode.
+  text:: It was created to give your application complete control over which files are accessable and which are not, how the side nav is structured and where the app root contents resides. yaat construct files can either be created by initializing a yaat app using << yaat init m- tree >> which creates a build-ready yaat application with yaatconstruct included, or by simply creating a << .yaatconstruct >> file in the same directry where all your yaatfiles resides : << /docs >>.
+  info:: The yaatconstruct helper file is not needed when running applications on branch mode.
+ 
+  hx:: Contents
+  text:: As described earlier, the contents of a << .yaatconstruct >> file are typically << key = value >> fields seperated by whitespaces where  where : << key >> is the title of the file to be shown on the side nav, and << value >> is a path to where the file content resides. 
+  info:: Note - the .yaatconstruct syntax works same as the a .env file,  example:
+
+  computerCode:: helpers.yc.e1, FileSystem
+  text:: [[ The .yaatconstruct file must be on the same docs dir as every other yaat files ]]
+
+  computerCode:: helpers.yc.e2, .yaatconstruct
+  text:: Where `Application` , `Commands` and `Helpers` respectively are the the tabs of the renderd side navigation  and the contents of `app.yaat`, `commands.yaat` or `helpers.yaat`  are built and mounted when their tab is clicked.
+
+
+
+
+sec::
+  hl:: Yaat Embed
+  text:: The (( yaat embed )) is a helper file which serves as a storage for computer codes. without the yaat embed helper, you cannot embed computer codes to your yaat application which is because every << path_to_an_embededcode >> in your (( computerCode )) element must point to a location in the yaatembed helper file using a (( referenceName )).
+  info:: A computercode's content is not displayed if its reference name does not exists in the yaatembed helper file.
+  text:: The yaat embed file can either be created by initializing a yaat app using << yaat init m- tree >>  or << yaat init m- branch >> which creates a build-ready yaat application with .yaatEmbed included, or by simply creating a << .yaatEmbed >> file in the same directry where all your yaatfiles resides : << /docs >>.
+  info:: There can only be 1 .yaatEmbed file on the whole yaat docs/ directory.
+
+  hx:: Contents
+  computerCode:: helpers.yc.e1, FileSystem
+  text:: [[ The .yaatembed file must be on the same docs dir as every other yaat files ]]
+
+  computerCode:: helpers.ye.e1, .yaatEmbed
+  text:: The above code is a simple snippet for a .yaatEmbed file. the $SEPERATOR tag in the above code should be replaced with the << ::: >> sign which defines the [[ seperator tag ]] : This tag seperates reference Names from thier values.
+  text:: any name used before the << ::: >> seperator tag and after a break command is a (( referenceName )).
+  text:: <br/>The $BREAK_COMMAND command in the above code should be replaced with the << Yaat -EndEmbededBlock >> command which forces yaat to end the reference block. Any other content after this command is interpreted as a new Reference block.
