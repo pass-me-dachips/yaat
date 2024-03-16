@@ -11,3 +11,7 @@ sec::
   hl:: Whats next?
   text:: If you had made it this far, all you have to do is navigate to the << yaat/docs >> directory and edit its contents, Thats it!
   
+sec::
+  hl:: Running the application
+  text:: You can start your yaat application by simply running << npm start >> on the << /yaat >> directory and this should start the yaat application on port [[ 6500 ]] and render its content on your default web browser.
+  text:: If you choose to use a different port, then you can run << npm start port- your_port_number >> instead, to run yaat on your specified port.
