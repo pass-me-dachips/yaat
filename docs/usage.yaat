@@ -1,0 +1,13 @@
+title:: Usage
+
+sec:: 
+ text:: This guide provides a basic guide on how yaat can be used.
+
+sec::
+  computerCode:: installation.1, Shell
+  text:: This command clones yaat codebase from github to the current directory. if this was successful, you should now see a new yaat folder containing yaat contents on your current directory.
+
+sec::
+  hl:: Whats next?
+  text:: If you had made it this far, all you have to do is navigate to the << yaat/docs >> directory and edit its contents, Thats it!
+  

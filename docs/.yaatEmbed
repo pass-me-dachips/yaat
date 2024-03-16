@@ -334,11 +334,9 @@ Yaat -EndEmbededBlock
 
 
 installation.1 :::
-$ npm install -g new-yaat
-#installs yaat globally.
-
-$ yaat info
-# checks if yaat was installed successfully.
+$ cd your_directory
+$ git clone https://github.com/pass-me-dachips/yaat.git
+# this would download the yaat code to /yaat on the current directory.
 Yaat -EndEmbededBlock
 
 

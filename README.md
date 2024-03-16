@@ -16,29 +16,19 @@ By utilizing Yaat, you can enhance the accessibility and user experience of your
 
 With YAAT at your disposal, you can elevate the standards of your application's documentation. The intuitive interface, coupled with the powerful markup language, enables you to create detailed and informative guides that cater to diverse audiences. Whether you're documenting code snippets, API references, or user guides, YAAT provides the tools you need to deliver exceptional documentation.
 
-## Installation
-
-```bash
-$ npm i -g new-yaat
-#installs yaat globally.
-```
-
-This commands installs yaat globally on your machine.
-run `yaat info` to ensure yaat was installed successfully.
-
 ## Docs
 
 View docs for all yaat versions 👇
 
 - v1.1.0 `current` (`recommended`) [view docs](https://yaat-1-1-0.onrender.com)
 
-To view the yaat **CURRENT** docs for your specific version, run 👇
+To view the yaat **CURRENT** docs for your specific version, navigate to your cloned yaat directory and run 👇
 
 ```bash
-$ yaat help
+$ npm start help
 ```
 
-**YOU MUST HAVE YAAT INSTALLED TO USE THIS COMMAND.**
+**YOU MUST HAVE NODEJS 18 ABOVE AND NPM TO USE THIS COMMAND.**
 
 ## Conclusion
 
