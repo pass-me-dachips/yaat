@@ -19,7 +19,7 @@ With YAAT at your disposal, you can elevate the standards of your application's 
 ## Installation
 
 ```bash
-$ npm i -g david-yaat
+$ npm i -g new-yaat
 #installs yaat globally.
 
 $ yaat chuser <username>

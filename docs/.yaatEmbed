@@ -305,7 +305,7 @@ Yaat -EndEmbededBlock
 
 
 bonus.e1 :::
-npm install -g david-yaat
+npm install -g new-yaat
 Yaat -EndEmbededBlock
 
 
@@ -334,7 +334,7 @@ Yaat -EndEmbededBlock
 
 
 installation.1 :::
-$ npm install -g david-yaat
+$ npm install -g new-yaat
 #installs yaat globally.
 
 $ yaat chuser <username>
@@ -352,7 +352,7 @@ Yaat -EndEmbededBlock
 
 
 hosting.2 :::
-$ npm install david-yaat
+$ npm install new-yaat
 #installs yaat.
 
 $ ./node_modules/.bin/yaat chuser <username>
