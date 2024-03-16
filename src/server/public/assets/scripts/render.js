@@ -10,7 +10,7 @@ const url = window.location.href.split("/")[0];
       },
     });
     const tree = await response.json();
-    document.title = tree.files[0]
+    document.title = tree.files ? tree?.files[0] : 'Yaat'
     RestBody(tree);
   } catch (error) {
     console.log(error.message);
