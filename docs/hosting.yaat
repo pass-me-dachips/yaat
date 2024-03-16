@@ -6,23 +6,21 @@ sec::
  info:: Yaat recommends utilizing render for hosting.
 
 sec::
- hx:: Installing yaat globally
+ hx:: Get started
  computerCode:: installation.1, Shell
- text:: The above command installs yaat globally.
+ text:: This command clones yaat codebase from github to the current directory. if this was successful, you should now see a new yaat folder containing yaat contents on your current directory.
+ info:: NOTE: do not clone the repo in the project's directory if you are planing on hosting. it is generally recommeded to clone the yaat repo on a parent directory ``` the same directory where you stored the project root directory ``` and rename it to your projects name, making it a standalone project and not a sub project.
+ text:: The below structure is a recommended structure for your yaat application if deploying.
+ computerCode:: installation.2, Filesystem
 
 sec::
  hx:: Adding your Yaat Contents
- text:: Now that you have installed yaat and ensure its working, run the following command to initialize a yaat application
- computerCode:: hosting.1, Shell
- text:: After initializing your yaat application, you can edit its contents and add new files etc.
+ text:: After completing the above example, you can edit the contents and add new files etc in the << cloned_yaat_repo/docs >> directory.
  info:: Be sure to run your application locally after every changes to ensure its looking exactly as you want. Remember that your hosted application would look and operate exactly as your local application.
  
 sec::
  hx:: Hosting Your yaat application
- text:: Before hosting your yaat application, it is compulsory to install yaat as a dependecy on your project.
- computerCode:: hosting.2, Shell
- text:: The above commands installs yaat as a dependecy.
 
- text:: Now create a new web service on <a href='https://dashboard.render.com/create?type=web'>render.com</a> and add the following content to the fields respectively:
- computerCode:: hosting.3, RENDER OPTIONS 
+ text:: Now create a new web service on <a href='https://dashboard.render.com/create?type=web'>render.com</a> with the code for your yaat application and add the following content to the fields respectively:
+ computerCode:: hosting.1, RENDER OPTIONS 
  text:: After this, you can start deploying. Thats it, you can now acces your yaat application anywhere around the world once deployed coompletely.

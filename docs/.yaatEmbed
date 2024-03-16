@@ -234,23 +234,15 @@ Yaat -EndEmbededBlock
 
 
 
+installation.2 :::
+ root/
+ your_project_directory/
+ the_cloned_yaat_repo/
+ # you can rename it to eg: projectname-docs.
+Yaat -EndEmbededBlock
+
+
 hosting.1 :::
-$ yaat init m- tree t- Deploying.Yaat.Application
-
-Yaat -EndEmbededBlock
-
-
-hosting.2 :::
-$ npm install new-yaat
-#installs yaat.
-
-$ ./node_modules/.bin/yaat info
-# confirm yaat was installed.
-
-Yaat -EndEmbededBlock
-
-
-hosting.3 :::
 
 Name = <Nameofproject>
 Region = <chooseanyregion>
@@ -258,7 +250,7 @@ Branch = <chooseyourdefaultbranch>
 Root Directory = .
 Runtime = Node
 Build Command = npm install
-Start Command = ./node_modules/.bin/yaat 
+Start Command = npm start
 
 Yaat -EndEmbededBlock
 
