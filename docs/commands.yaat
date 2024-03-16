@@ -12,7 +12,6 @@ sec::
   list:: yaat cat
   list:: yaat help
   list:: yaat info 
-  list:: yaat chuser <new_user>
 
 sec:: 
   hl:: yaat
@@ -81,7 +80,7 @@ sec::
 
 sec:: 
   hl:: yaat help
-  text:: Render the current documentation you are reading,  on your browser.
+  text:: redirects you to the yaat doc for your current version.
 
   hx:: usage
   computerCode:: commands.help.usage, Shell
@@ -97,9 +96,3 @@ sec::
 
 
 
-sec:: 
-  hl:: yaat chuser <new_user>
-  text:: changes the yaat's << current user >> to the << new_user >>. default is << yaat@no-user >>
-
-  hx:: usage
-  computerCode:: commands.chuser.usage, Shell
