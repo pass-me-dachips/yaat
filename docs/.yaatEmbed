@@ -206,17 +206,7 @@ $BREAK_COMMAND
 Yaat -EndEmbededBlock
 
 
-bonus.e1 :::
-npm install -g new-yaat
-Yaat -EndEmbededBlock
-
-
-bonus.e2 :::
-yaat init m- tree t- bonus
-Yaat -EndEmbededBlock
-
-
-bonus.e3:::
+bonus.e1:::
 title:: Yaat Application
 
 sec::
