@@ -337,9 +337,8 @@ installation.1 :::
 $ npm install -g new-yaat
 #installs yaat globally.
 
-$ yaat chuser <username>
-# changes the default yaat user.
-
+$ yaat info
+# checks if yaat was installed successfully.
 Yaat -EndEmbededBlock
 
 
