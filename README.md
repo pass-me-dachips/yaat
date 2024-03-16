@@ -10,7 +10,7 @@ One of YAAT's standout features is its seamless conversion of its custom markup 
 
 ## Enhancing Accessibility and User Experience
 
-By utilizing , you can enhance the accessibility and user experience of your application's documentation. The ability to create portable documentations means that users can access vital information anytime, anywhere, without compromising on quality or formatting. This flexibility ensures that your documentation remains a valuable resource for both developers and end-users.
+By utilizing Yaat, you can enhance the accessibility and user experience of your application's documentation. The ability to create portable documentations means that users can access vital information anytime, anywhere, without compromising on quality or formatting. This flexibility ensures that your documentation remains a valuable resource for both developers and end-users.
 
 ## Elevating Documentation Standards
 
@@ -40,7 +40,7 @@ To view the yaat **CURRENT** docs for your specific version, run 👇
 $ yaat help
 ```
 
-this should display the docs on your default web browser. **YOU MUST HAVE YAAT INSTALLED TO USE THIS COMMAND**
+**YOU MUST HAVE YAAT INSTALLED TO USE THIS COMMAND.**
 
 ## Conclusion
 
